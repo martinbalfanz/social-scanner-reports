@@ -2,30 +2,30 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-06T21:14:09.651392+00:00 · Last scan: 2026-05-06T21:13:36.605750+00:00_
+_Generated: 2026-05-06T22:05:17.336783+00:00 · Last scan: 2026-05-06T22:05:04.398063+00:00_
 
 ## Headlines
 
 | | Count |
 |---|---:|
-| Posts pulled across all sources | 3,080 |
-| Posts classified relevant | **177** |
+| Posts pulled across all sources | 3,105 |
+| Posts classified relevant | **178** |
 | ↳ Webcompat with a domain | 65 |
 | ↳ Webcompat without a clear domain | 17 |
-| ↳ Firefox platform issues | 92 |
+| ↳ Firefox platform issues | 93 |
 
 ### Bugs on file vs potentially new
 
 | Bucket | Items | With likely match | Potentially new |
 |---|---:|---:|---:|
 | Webcompat (with domain) | 65 | 8 | **57** |
-| Firefox platform | 92 | 6 | **86** |
+| Firefox platform | 93 | 6 | **87** |
 
-**160 actionable items** (no clear matching bug filed): 57 webcompat-with-domain, 17 webcompat-no-domain, 86 platform.
+**161 actionable items** (no clear matching bug filed): 57 webcompat-with-domain, 17 webcompat-no-domain, 87 platform.
 
 ## Trends (week over week)
 
-**64** relevant items this week vs **45** last week (+19, up).
+**65** relevant items this week vs **45** last week (+20, up).
 
 No escalating or newly-emerging domains this week. (The aggregate change is spread across domains, none hit the +2 threshold.)
 
@@ -93,7 +93,7 @@ Platform reports the matcher confirmed against existing bugs:
 
 ## Latest reports
 
-- [2026-05-06](2026/2026-05/2026-05-06.md) — 14 items
+- [2026-05-06](2026/2026-05/2026-05-06.md) — 15 items
 - [2026-05-05](2026/2026-05/2026-05-05.md) — 11 items
 - [2026-05-04](2026/2026-05/2026-05-04.md) — 2 items
 - [2026-05-03](2026/2026-05/2026-05-03.md) — 5 items
