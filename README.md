@@ -2,30 +2,30 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-06T23:12:34.910731+00:00 · Last scan: 2026-05-06T23:05:04.556199+00:00_
+_Generated: 2026-05-07T06:10:04.762651+00:00 · Last scan: 2026-05-07T06:09:35.833476+00:00_
 
 ## Headlines
 
 | | Count |
 |---|---:|
-| Posts pulled across all sources | 3,105 |
-| Posts classified relevant | **178** |
-| ↳ Webcompat with a domain | 65 |
+| Posts pulled across all sources | 3,216 |
+| Posts classified relevant | **181** |
+| ↳ Webcompat with a domain | 67 |
 | ↳ Webcompat without a clear domain | 17 |
-| ↳ Firefox platform issues | 93 |
+| ↳ Firefox platform issues | 94 |
 
 ### Bugs on file vs potentially new
 
 | Bucket | Items | With likely match | Potentially new |
 |---|---:|---:|---:|
-| Webcompat (with domain) | 65 | 8 | **57** |
-| Firefox platform | 93 | 6 | **87** |
+| Webcompat (with domain) | 67 | 9 | **58** |
+| Firefox platform | 94 | 6 | **88** |
 
-**161 actionable items** (no clear matching bug filed): 57 webcompat-with-domain, 17 webcompat-no-domain, 87 platform.
+**163 actionable items** (no clear matching bug filed): 58 webcompat-with-domain, 17 webcompat-no-domain, 88 platform.
 
 ## Trends (week over week)
 
-**65** relevant items this week vs **45** last week (+20, up).
+**59** relevant items this week vs **53** last week (+6, up).
 
 No escalating or newly-emerging domains this week. (The aggregate change is spread across domains, none hit the +2 threshold.)
 
@@ -35,7 +35,7 @@ Domains by report volume across the entire dataset:
 
 | Domain | Posts | Likely match on file | Potentially new |
 |---|---:|---:|---:|
-| `bsky.app` | 13 | 5 | **8** |
+| `bsky.app` | 14 | 6 | **8** |
 | `youtube.com` | 10 | 0 | **10** |
 | `facebook.com` | 5 | 0 | **5** |
 | `twitch.tv` | 3 | 0 | **3** |
@@ -93,7 +93,8 @@ Platform reports the matcher confirmed against existing bugs:
 
 ## Latest reports
 
-- [2026-05-06](2026/2026-05/2026-05-06.md) — 15 items
+- [2026-05-07](2026/2026-05/2026-05-07.md) — 1 item
+- [2026-05-06](2026/2026-05/2026-05-06.md) — 17 items
 - [2026-05-05](2026/2026-05/2026-05-05.md) — 11 items
 - [2026-05-04](2026/2026-05/2026-05-04.md) — 2 items
 - [2026-05-03](2026/2026-05/2026-05-03.md) — 5 items
@@ -102,12 +103,11 @@ Platform reports the matcher confirmed against existing bugs:
 - [2026-04-30](2026/2026-04/2026-04-30.md) — 9 items
 - [2026-04-29](2026/2026-04/2026-04-29.md) — 9 items
 - [2026-04-28](2026/2026-04/2026-04-28.md) — 8 items
-- [2026-04-27](2026/2026-04/2026-04-27.md) — 5 items
 
 ## Browse
 
 - [Full reports index](index.md) — every dated report, by month
-- [Latest leadership share-out](2026-05-06-share-out.md) — richer commentary, recommendations, links to examples
+- [Latest leadership share-out](2026-05-07-share-out.md) — richer commentary, recommendations, links to examples
 
 ## How to read each report
 
