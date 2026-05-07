@@ -2,26 +2,26 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-07T20:05:50.907334+00:00 · Last scan: 2026-05-07T20:05:04.347960+00:00_
+_Generated: 2026-05-07T21:06:47.052291+00:00 · Last scan: 2026-05-07T21:05:48.359213+00:00_
 
 ## Headlines
 
 | | Count |
 |---|---:|
-| Posts pulled across all sources | 4,192 |
-| Posts classified relevant | **197** |
+| Posts pulled across all sources | 4,225 |
+| Posts classified relevant | **198** |
 | ↳ Webcompat with a domain | 72 |
 | ↳ Webcompat without a clear domain | 18 |
-| ↳ Firefox platform issues | 104 |
+| ↳ Firefox platform issues | 105 |
 
 ### Bugs on file vs potentially new
 
 | Bucket | Items | With likely match | Potentially new |
 |---|---:|---:|---:|
 | Webcompat (with domain) | 72 | 9 | **63** |
-| Firefox platform | 104 | 7 | **97** |
+| Firefox platform | 105 | 7 | **98** |
 
-**178 actionable items** (no clear matching bug filed): 63 webcompat-with-domain, 18 webcompat-no-domain, 97 platform.
+**179 actionable items** (no clear matching bug filed): 63 webcompat-with-domain, 18 webcompat-no-domain, 98 platform.
 
 ## Charts
 
@@ -32,7 +32,7 @@ xychart-beta
     title "Relevant items per day"
     x-axis ["04-24", "04-25", "04-26", "04-27", "04-28", "04-29", "04-30", "05-01", "05-02", "05-03", "05-04", "05-05", "05-06", "05-07"]
     y-axis "Items" 0 --> 19
-    bar [12, 2, 11, 5, 8, 10, 10, 6, 9, 5, 2, 11, 18, 10]
+    bar [12, 2, 11, 5, 8, 10, 10, 6, 9, 5, 2, 11, 18, 11]
 ```
 
 ### Bugs on file vs potentially new
@@ -40,7 +40,7 @@ xychart-beta
 ```mermaid
 pie showData title Likely on file vs potentially new
     "Likely on file" : 16
-    "Potentially new" : 160
+    "Potentially new" : 161
 ```
 
 ### Relevant items by source
@@ -50,7 +50,7 @@ xychart-beta
     title "Relevant items per source"
     x-axis ["bluesky", "reddit", "reddit_comments", "sumo", "github", "mastodon"]
     y-axis "Items" 0 --> 104
-    bar [103, 56, 12, 12, 7, 7]
+    bar [103, 57, 12, 12, 7, 7]
 ```
 
 ### Top domains by report volume
@@ -65,7 +65,7 @@ xychart-beta
 
 ## Trends (week over week)
 
-**71** relevant items this week vs **54** last week (+17, up).
+**72** relevant items this week vs **54** last week (+18, up).
 
 No escalating or newly-emerging domains this week. (The aggregate change is spread across domains, none hit the +2 threshold.)
 
@@ -133,7 +133,7 @@ Platform reports the matcher confirmed against existing bugs:
 
 ## Latest reports
 
-- [2026-05-07](2026/2026-05/2026-05-07.md) — 10 items
+- [2026-05-07](2026/2026-05/2026-05-07.md) — 11 items
 - [2026-05-06](2026/2026-05/2026-05-06.md) — 18 items
 - [2026-05-05](2026/2026-05/2026-05-05.md) — 11 items
 - [2026-05-04](2026/2026-05/2026-05-04.md) — 2 items
