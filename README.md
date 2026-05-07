@@ -2,7 +2,7 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-07T08:12:50.105241+00:00 · Last scan: 2026-05-07T08:10:41.126135+00:00_
+_Generated: 2026-05-07T08:45:09.955543+00:00 · Last scan: 2026-05-07T08:10:41.126135+00:00_
 
 ## Headlines
 
@@ -22,6 +22,36 @@ _Generated: 2026-05-07T08:12:50.105241+00:00 · Last scan: 2026-05-07T08:10:41.1
 | Firefox platform | 94 | 6 | **88** |
 
 **164 actionable items** (no clear matching bug filed): 59 webcompat-with-domain, 17 webcompat-no-domain, 88 platform.
+
+## Charts
+
+### Daily relevant items (last 14 days)
+
+```mermaid
+xychart-beta
+    title "Relevant items per day"
+    x-axis ["04-24", "04-25", "04-26", "04-27", "04-28", "04-29", "04-30", "05-01", "05-02", "05-03", "05-04", "05-05", "05-06", "05-07"]
+    y-axis "Items" 0 --> 18
+    bar [12, 2, 11, 5, 8, 9, 9, 5, 9, 5, 2, 11, 17, 2]
+```
+
+### Bugs on file vs potentially new
+
+```mermaid
+pie showData title Likely on file vs potentially new
+    "Likely on file" : 15
+    "Potentially new" : 147
+```
+
+### Top domains by report volume
+
+```mermaid
+xychart-beta
+    title "Posts per domain"
+    x-axis ["bsky", "youtube", "facebook", "twitch", "google", "drive.google", "claude", "wix", "w.struct", "threads"]
+    y-axis "Posts" 0 --> 15
+    bar [14, 10, 5, 3, 3, 2, 2, 1, 1, 1]
+```
 
 ## Trends (week over week)
 
@@ -107,7 +137,6 @@ Platform reports the matcher confirmed against existing bugs:
 ## Browse
 
 - [Full reports index](index.md) — every dated report, by month
-- [Latest leadership share-out](2026-05-07-share-out.md) — richer commentary, recommendations, links to examples
 
 ## How to read each report
 

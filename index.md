@@ -4,8 +4,6 @@ Daily WebCompat scans across Reddit, Hacker News, and Bluesky.
 Each report groups relevant items by affected domain, with
 cross-references against Bugzilla and webcompat/web-bugs.
 
-**Latest context:** [2026-05-07-share-out.md](./2026-05-07-share-out.md)
-
 ## Reports
 
 
