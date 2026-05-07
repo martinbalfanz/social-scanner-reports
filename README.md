@@ -2,7 +2,7 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-07T11:07:24.497028+00:00 · Last scan: 2026-05-07T11:05:06.208242+00:00_
+_Generated: 2026-05-07T12:03:49.821035+00:00 · Last scan: 2026-05-07T11:05:06.208242+00:00_
 
 ## Headlines
 
@@ -41,6 +41,16 @@ xychart-beta
 pie showData title Likely on file vs potentially new
     "Likely on file" : 15
     "Potentially new" : 155
+```
+
+### Relevant items by source
+
+```mermaid
+xychart-beta
+    title "Relevant items per source"
+    x-axis ["bluesky", "reddit", "reddit_comments", "sumo", "github", "mastodon"]
+    y-axis "Items" 0 --> 104
+    bar [103, 56, 9, 9, 7, 7]
 ```
 
 ### Top domains by report volume
