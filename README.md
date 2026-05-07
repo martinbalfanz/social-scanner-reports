@@ -2,26 +2,26 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-07T09:05:12.793317+00:00 · Last scan: 2026-05-07T09:05:04.586596+00:00_
+_Generated: 2026-05-07T10:05:17.381866+00:00 · Last scan: 2026-05-07T10:05:06.454324+00:00_
 
 ## Headlines
 
 | | Count |
 |---|---:|
-| Posts pulled across all sources | 3,292 |
-| Posts classified relevant | **182** |
+| Posts pulled across all sources | 3,321 |
+| Posts classified relevant | **183** |
 | ↳ Webcompat with a domain | 68 |
 | ↳ Webcompat without a clear domain | 17 |
-| ↳ Firefox platform issues | 94 |
+| ↳ Firefox platform issues | 95 |
 
 ### Bugs on file vs potentially new
 
 | Bucket | Items | With likely match | Potentially new |
 |---|---:|---:|---:|
 | Webcompat (with domain) | 68 | 9 | **59** |
-| Firefox platform | 94 | 6 | **88** |
+| Firefox platform | 95 | 6 | **89** |
 
-**164 actionable items** (no clear matching bug filed): 59 webcompat-with-domain, 17 webcompat-no-domain, 88 platform.
+**165 actionable items** (no clear matching bug filed): 59 webcompat-with-domain, 17 webcompat-no-domain, 89 platform.
 
 ## Charts
 
@@ -32,7 +32,7 @@ xychart-beta
     title "Relevant items per day"
     x-axis ["04-24", "04-25", "04-26", "04-27", "04-28", "04-29", "04-30", "05-01", "05-02", "05-03", "05-04", "05-05", "05-06", "05-07"]
     y-axis "Items" 0 --> 18
-    bar [12, 2, 11, 5, 8, 9, 9, 5, 9, 5, 2, 11, 17, 2]
+    bar [12, 2, 11, 5, 8, 9, 9, 5, 9, 5, 2, 11, 17, 3]
 ```
 
 ### Bugs on file vs potentially new
@@ -40,7 +40,7 @@ xychart-beta
 ```mermaid
 pie showData title Likely on file vs potentially new
     "Likely on file" : 15
-    "Potentially new" : 147
+    "Potentially new" : 148
 ```
 
 ### Top domains by report volume
@@ -55,7 +55,7 @@ xychart-beta
 
 ## Trends (week over week)
 
-**60** relevant items this week vs **53** last week (+7, up).
+**61** relevant items this week vs **53** last week (+8, up).
 
 No escalating or newly-emerging domains this week. (The aggregate change is spread across domains, none hit the +2 threshold.)
 
@@ -123,7 +123,7 @@ Platform reports the matcher confirmed against existing bugs:
 
 ## Latest reports
 
-- [2026-05-07](2026/2026-05/2026-05-07.md) — 2 items
+- [2026-05-07](2026/2026-05/2026-05-07.md) — 3 items
 - [2026-05-06](2026/2026-05/2026-05-06.md) — 17 items
 - [2026-05-05](2026/2026-05/2026-05-05.md) — 11 items
 - [2026-05-04](2026/2026-05/2026-05-04.md) — 2 items
