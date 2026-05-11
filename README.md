@@ -2,26 +2,26 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-08T13:05:47.813325+00:00 · Last scan: 2026-05-08T13:05:04.324200+00:00_
+_Generated: 2026-05-11T07:49:00.697779+00:00 · Last scan: 2026-05-08T14:18:45.441890+00:00_
 
 ## Headlines
 
 | | Count |
 |---|---:|
-| Posts pulled across all sources | 4,701 |
-| Posts classified relevant | **206** |
-| ↳ Webcompat with a domain | 73 |
+| Posts pulled across all sources | 4,790 |
+| Posts classified relevant | **210** |
+| ↳ Webcompat with a domain | 74 |
 | ↳ Webcompat without a clear domain | 18 |
-| ↳ Firefox platform issues | 112 |
+| ↳ Firefox platform issues | 115 |
 
 ### Bugs on file vs potentially new
 
 | Bucket | Items | With likely match | Potentially new |
 |---|---:|---:|---:|
-| Webcompat (with domain) | 73 | 9 | **64** |
-| Firefox platform | 112 | 7 | **105** |
+| Webcompat (with domain) | 74 | 9 | **65** |
+| Firefox platform | 115 | 8 | **107** |
 
-**187 actionable items** (no clear matching bug filed): 64 webcompat-with-domain, 18 webcompat-no-domain, 105 platform.
+**190 actionable items** (no clear matching bug filed): 65 webcompat-with-domain, 18 webcompat-no-domain, 107 platform.
 
 ## Charts
 
@@ -30,17 +30,17 @@ _Generated: 2026-05-08T13:05:47.813325+00:00 · Last scan: 2026-05-08T13:05:04.3
 ```mermaid
 xychart-beta
     title "Relevant items per day"
-    x-axis ["04-25", "04-26", "04-27", "04-28", "04-29", "04-30", "05-01", "05-02", "05-03", "05-04", "05-05", "05-06", "05-07", "05-08"]
+    x-axis ["04-28", "04-29", "04-30", "05-01", "05-02", "05-03", "05-04", "05-05", "05-06", "05-07", "05-08", "05-09", "05-10", "05-11"]
     y-axis "Items" 0 --> 19
-    bar [2, 11, 5, 8, 10, 10, 6, 9, 5, 2, 11, 18, 11, 7]
+    bar [8, 10, 10, 6, 9, 5, 2, 11, 18, 11, 11, 0, 0, 0]
 ```
 
 ### Bugs on file vs potentially new
 
 ```mermaid
 pie showData title Likely on file vs potentially new
-    "Likely on file" : 16
-    "Potentially new" : 169
+    "Likely on file" : 17
+    "Potentially new" : 172
 ```
 
 ### Relevant items by source
@@ -49,8 +49,8 @@ pie showData title Likely on file vs potentially new
 xychart-beta
     title "Relevant items per source"
     x-axis ["bluesky", "reddit", "reddit_comments", "sumo", "github", "mastodon"]
-    y-axis "Items" 0 --> 104
-    bar [103, 58, 16, 14, 8, 7]
+    y-axis "Items" 0 --> 105
+    bar [104, 58, 19, 14, 8, 7]
 ```
 
 ### Top domains by report volume
@@ -59,16 +59,15 @@ xychart-beta
 xychart-beta
     title "Posts per domain"
     x-axis ["bsky", "youtube", "facebook", "twitch", "google", "drive.google", "claude", "wix", "w.struct", "threads"]
-    y-axis "Posts" 0 --> 15
-    bar [14, 10, 5, 4, 3, 2, 2, 1, 1, 1]
+    y-axis "Posts" 0 --> 16
+    bar [15, 10, 5, 4, 3, 2, 2, 1, 1, 1]
 ```
 
 ## Trends (week over week)
 
-**69** relevant items this week vs **58** last week (+11, up).
+**53** relevant items this week vs **53** last week (+0, flat).
 
-**New domains** (no reports last week, ≥2 this week):
-- `twitch.tv`: 2 reports
+No escalating or newly-emerging domains this week. (The aggregate change is spread across domains, none hit the +2 threshold.)
 
 ## Top clusters
 
@@ -76,7 +75,7 @@ Domains by report volume across the entire dataset:
 
 | Domain | Posts | Likely match on file | Potentially new |
 |---|---:|---:|---:|
-| `bsky.app` | 14 | 6 | **8** |
+| `bsky.app` | 15 | 6 | **9** |
 | `youtube.com` | 10 | 0 | **10** |
 | `facebook.com` | 5 | 0 | **5** |
 | `twitch.tv` | 4 | 0 | **4** |
@@ -128,13 +127,13 @@ Platform reports the matcher confirmed against existing bugs:
 
 - **Firefox vertical tabs sidebar gets stuck expanded, blocking page and settings access.** → [BMO#1987303](https://bugzilla.mozilla.org/show_bug.cgi?id=1987303)  _When Windows animations are disabled, sometimes the vertical tabs sidebar gets s_
 - **Firefox Sync not syncing bookmarks across Android and Ubuntu devices.** → [BMO#1972182](https://bugzilla.mozilla.org/show_bug.cgi?id=1972182)  _Issue with syncing Bookmarks on Firefox Android_
+- **Right-click context menu not working in Firefox on NixOS** → [BMO#1762425](https://bugzilla.mozilla.org/show_bug.cgi?id=1762425)  _Firefox right click context menu not working properly in bspwm_
 - **Audio not working on video players in Firefox** → [BMO#1933319](https://bugzilla.mozilla.org/show_bug.cgi?id=1933319)  _not working video and audio playback in video players_
 - **Firefox context menus broken on Wayland after monitor power-cycle.** → [BMO#1564076](https://bugzilla.mozilla.org/show_bug.cgi?id=1564076)  _[Wayland] context menus not shown once deactivating external monitors_
-- **Firefox on Linux unable to play some videos with "no supported format and mime type" error** → [BMO#1935598](https://bugzilla.mozilla.org/show_bug.cgi?id=1935598)  _testbook.com - Unable to watch videos, firefox is not supported_
 
 ## Latest reports
 
-- [2026-05-08](2026/2026-05/2026-05-08.md) — 7 items
+- [2026-05-08](2026/2026-05/2026-05-08.md) — 11 items
 - [2026-05-07](2026/2026-05/2026-05-07.md) — 11 items
 - [2026-05-06](2026/2026-05/2026-05-06.md) — 18 items
 - [2026-05-05](2026/2026-05/2026-05-05.md) — 11 items
