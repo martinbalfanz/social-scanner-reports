@@ -2,26 +2,26 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-11T09:16:15.091779+00:00 · Last scan: 2026-05-11T09:16:14.922692+00:00_
+_Generated: 2026-05-11T10:07:21.289639+00:00 · Last scan: 2026-05-11T10:05:00.988802+00:00_
 
 ## Headlines
 
 | | Count |
 |---|---:|
-| Posts pulled across all sources | 4,790 |
-| Posts classified relevant | **210** |
-| ↳ Webcompat with a domain | 74 |
-| ↳ Webcompat without a clear domain | 18 |
-| ↳ Firefox platform issues | 115 |
+| Posts pulled across all sources | 5,307 |
+| Posts classified relevant | **232** |
+| ↳ Webcompat with a domain | 82 |
+| ↳ Webcompat without a clear domain | 21 |
+| ↳ Firefox platform issues | 126 |
 
 ### Bugs on file vs potentially new
 
 | Bucket | Items | With likely match | Potentially new |
 |---|---:|---:|---:|
-| Webcompat (with domain) | 74 | 9 | **65** |
-| Firefox platform | 115 | 8 | **107** |
+| Webcompat (with domain) | 82 | 10 | **72** |
+| Firefox platform | 126 | 9 | **117** |
 
-**190 actionable items** (no clear matching bug filed): 65 webcompat-with-domain, 18 webcompat-no-domain, 107 platform.
+**210 actionable items** (no clear matching bug filed): 72 webcompat-with-domain, 21 webcompat-no-domain, 117 platform.
 
 ## Charts
 
@@ -32,15 +32,15 @@ xychart-beta
     title "Relevant items per day"
     x-axis ["04-28", "04-29", "04-30", "05-01", "05-02", "05-03", "05-04", "05-05", "05-06", "05-07", "05-08", "05-09", "05-10", "05-11"]
     y-axis "Items" 0 --> 19
-    bar [8, 10, 10, 6, 9, 5, 2, 11, 18, 11, 11, 0, 0, 0]
+    bar [8, 10, 10, 6, 9, 5, 2, 11, 18, 11, 12, 2, 5, 14]
 ```
 
 ### Bugs on file vs potentially new
 
 ```mermaid
 pie showData title Likely on file vs potentially new
-    "Likely on file" : 17
-    "Potentially new" : 172
+    "Likely on file" : 19
+    "Potentially new" : 189
 ```
 
 ### Relevant items by source
@@ -49,8 +49,8 @@ pie showData title Likely on file vs potentially new
 xychart-beta
     title "Relevant items per source"
     x-axis ["bluesky", "reddit", "reddit_comments", "sumo", "github", "mastodon"]
-    y-axis "Items" 0 --> 105
-    bar [104, 58, 19, 14, 8, 7]
+    y-axis "Items" 0 --> 108
+    bar [107, 61, 33, 16, 8, 7]
 ```
 
 ### Top domains by report volume
@@ -58,16 +58,17 @@ xychart-beta
 ```mermaid
 xychart-beta
     title "Posts per domain"
-    x-axis ["bsky", "youtube", "facebook", "twitch", "google", "drive.google", "claude", "wix", "w.struct", "threads"]
+    x-axis ["bsky", "youtube", "reddit", "facebook", "twitch", "google", "drive.google", "claude", "wix", "w.struct"]
     y-axis "Posts" 0 --> 16
-    bar [15, 10, 5, 4, 3, 2, 2, 1, 1, 1]
+    bar [15, 10, 5, 5, 4, 3, 2, 2, 1, 1]
 ```
 
 ## Trends (week over week)
 
-**53** relevant items this week vs **53** last week (+0, flat).
+**75** relevant items this week vs **53** last week (+22, up).
 
-No escalating or newly-emerging domains this week. (The aggregate change is spread across domains, none hit the +2 threshold.)
+**New domains** (no reports last week, ≥2 this week):
+- `reddit.com`: 5 reports
 
 ## Top clusters
 
@@ -77,6 +78,7 @@ Domains by report volume across the entire dataset:
 |---|---:|---:|---:|
 | `bsky.app` | 15 | 6 | **9** |
 | `youtube.com` | 10 | 0 | **10** |
+| `reddit.com` | 5 | 0 | **5** |
 | `facebook.com` | 5 | 0 | **5** |
 | `twitch.tv` | 4 | 0 | **4** |
 | `google.com` | 3 | 0 | **3** |
@@ -84,12 +86,14 @@ Domains by report volume across the entire dataset:
 | `claude.ai` | 2 | 2 | **0** |
 | `wix.com` | 1 | 0 | **1** |
 | `w.struct.ws` | 1 | 0 | **1** |
-| `threads.net` | 1 | 0 | **1** |
 
 ## High-urgency items with no matching bug
 
 Top webcompat reports by urgency where the matcher found no likely match in Bugzilla or webcompat/web-bugs. These are the candidates for a new filing:
 
+- **`coingecko.com`** · urgency 85 · reddit_comments
+  Firefox runs out of memory and becomes unresponsive on coingecko portfolio and lastminute.com search pages.
+  · [post](https://reddit.com/r/firefox/comments/1t7uf0r/is_firefox_having_a_memory_leak_right_now/ol56wpe/)
 - **`google.com`** · urgency 85 · mastodon
   Google Search broken on Firefox Android for hours; requests return malformed HTML.
   · [post](https://mastodon.cloud/@karlcow/111726266200532862)
@@ -102,14 +106,13 @@ Top webcompat reports by urgency where the matcher found no likely match in Bugz
 - **`facebook.com`** · urgency 78 · reddit
   Firefox 149 stalling with 20+ second input lag on Facebook Marketplace; processes stuck at 100%+ CPU.
   · [post](https://reddit.com/r/firefox/comments/1sunto8/firefox_149_stalling_badly_on_facebook/)
-- **`youtube.com`** · urgency 78 · reddit
-  YouTube videos cause extreme RAM consumption (1.5-7.5GB) and CPU throttling in Firefox, appearing after recent browser u
-  · [post](https://reddit.com/r/firefox/comments/1syx195/terrible_performance_while_watching_youtube/)
 
 ## High-urgency Firefox platform issues
 
 Top platform-level reports by urgency. These don't tie to a single domain:
 
+- urgency 95 · Firefox on Android freezes, locks up OS, has bookmark bugs, and causes site lockups.
+  · [post](https://reddit.com/r/firefox/comments/1t9xssv/firefox_unusable_on_android_p9/)
 - urgency 85 · Firefox showing certificate errors on all pages including mozilla.org
   · [post](https://bsky.app/profile/lexomatic.bsky.social/post/3mkkxe3o3ws2h)
 - urgency 85 · Firefox 150 silently fails HTTP Basic Auth, returning NS_ERROR_FAILURE instead of prompting for credentials.
@@ -118,8 +121,6 @@ Top platform-level reports by urgency. These don't tie to a single domain:
   · [post](https://reddit.com/r/firefox/comments/1t0hh6t/firefox_android_not_working_after_the_most_recent/)
 - urgency 85 · Firefox 149.0 crashes repeatedly when moving tabs; assertion error "Unhandled external image format"
   · [post](https://reddit.com/r/firefox/comments/1szcli8/firefox_1490_64bit_crashing_but_i_dont_know_what/)
-- urgency 85 · Firefox lagging and freezing with high memory usage after yesterday's update, causing BSOD on Windows 11.
-  · [post](https://reddit.com/r/firefox/comments/1symm8w/massive_lagging_and_freezing_since_yesterdays/)
 
 ## Platform issues already on file
 
@@ -133,16 +134,16 @@ Platform reports the matcher confirmed against existing bugs:
 
 ## Latest reports
 
-- [2026-05-08](2026/2026-05/2026-05-08.md) — 11 items
+- [2026-05-11](2026/2026-05/2026-05-11.md) — 14 items
+- [2026-05-10](2026/2026-05/2026-05-10.md) — 5 items
+- [2026-05-09](2026/2026-05/2026-05-09.md) — 2 items
+- [2026-05-08](2026/2026-05/2026-05-08.md) — 12 items
 - [2026-05-07](2026/2026-05/2026-05-07.md) — 11 items
 - [2026-05-06](2026/2026-05/2026-05-06.md) — 18 items
 - [2026-05-05](2026/2026-05/2026-05-05.md) — 11 items
 - [2026-05-04](2026/2026-05/2026-05-04.md) — 2 items
 - [2026-05-03](2026/2026-05/2026-05-03.md) — 5 items
 - [2026-05-02](2026/2026-05/2026-05-02.md) — 9 items
-- [2026-05-01](2026/2026-05/2026-05-01.md) — 6 items
-- [2026-04-30](2026/2026-04/2026-04-30.md) — 10 items
-- [2026-04-29](2026/2026-04/2026-04-29.md) — 10 items
 
 ## Browse
 
