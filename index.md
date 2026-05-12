@@ -9,7 +9,7 @@ cross-references against Bugzilla and webcompat/web-bugs.
 
 ### 2026-05
 
-- [2026-05-12](./2026/2026-05/2026-05-12.md) — 6 items (3 webcompat, 3 platform)
+- [2026-05-12](./2026/2026-05/2026-05-12.md) — 7 items (3 webcompat, 4 platform)
 - [2026-05-11](./2026/2026-05/2026-05-11.md) — 31 items (13 webcompat, 18 platform)
 - [2026-05-10](./2026/2026-05/2026-05-10.md) — 5 items (1 webcompat, 4 platform)
 - [2026-05-08](./2026/2026-05/2026-05-08.md) — 11 items (2 webcompat, 9 platform)
