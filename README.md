@@ -2,7 +2,7 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-12T23:39:36.454572+00:00 · Last scan: 2026-05-12T23:05:05.740880+00:00_
+_Generated: 2026-05-13T00:39:35.332814+00:00 · Last scan: 2026-05-13T00:05:04.353482+00:00_
 
 ## Headlines
 
@@ -30,9 +30,9 @@ _Generated: 2026-05-12T23:39:36.454572+00:00 · Last scan: 2026-05-12T23:05:05.7
 ```mermaid
 xychart-beta
     title "Relevant items per day"
-    x-axis ["04-29", "04-30", "05-01", "05-02", "05-03", "05-04", "05-05", "05-06", "05-07", "05-08", "05-09", "05-10", "05-11", "05-12"]
+    x-axis ["04-30", "05-01", "05-02", "05-03", "05-04", "05-05", "05-06", "05-07", "05-08", "05-09", "05-10", "05-11", "05-12", "05-13"]
     y-axis "Items" 0 --> 33
-    bar [10, 10, 6, 9, 5, 2, 11, 18, 11, 12, 2, 5, 32, 9]
+    bar [10, 6, 9, 5, 2, 11, 18, 11, 12, 2, 5, 32, 9, 0]
 ```
 
 ### Bugs on file vs potentially new
@@ -65,7 +65,7 @@ xychart-beta
 
 ## Trends (week over week)
 
-**100** relevant items this week vs **50** last week (+50, up).
+**89** relevant items this week vs **53** last week (+36, up).
 
 **New domains** (no reports last week, ≥2 this week):
 - `reddit.com`: 9 reports
