@@ -2,13 +2,13 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-17T13:05:36.553156+00:00 · Last scan: 2026-05-17T13:05:00.911042+00:00_
+_Generated: 2026-05-17T14:05:45.262160+00:00 · Last scan: 2026-05-17T14:05:05.766705+00:00_
 
 ## Headlines
 
 | | Count |
 |---|---:|
-| Posts pulled across all sources | 8,494 |
+| Posts pulled across all sources | 8,526 |
 | Posts classified relevant | **328** |
 | ↳ Webcompat with a domain | 119 |
 | ↳ Webcompat without a clear domain | 26 |
