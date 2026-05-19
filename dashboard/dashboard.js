@@ -101,24 +101,71 @@ function dashboard() {
 
     // -- computed --
 
-    get filteredItems() {
+    itemsWithoutFilter(skip) {
       const cutoff = this._dateCutoff();
       return this.data.items.filter(it => {
-        if (!this.filters.sources.has(it.source)) return false;
-        if (this.filters.category !== "all" && it.category !== this.filters.category) return false;
-        if (this.filters.domains.size > 0) {
+        if (skip !== "sources" && !this.filters.sources.has(it.source)) return false;
+        if (skip !== "category" && this.filters.category !== "all" && it.category !== this.filters.category) return false;
+        if (skip !== "domains" && this.filters.domains.size > 0) {
           if (!it.domain || !this.filters.domains.has(it.domain)) return false;
         }
-        if (!this.filters.triage.has(it.triage)) return false;
-        if (this.filters.match === "with") {
-          if (!it.bugs.some(b => b.verdict === "match")) return false;
+        if (skip !== "triage" && !this.filters.triage.has(it.triage)) return false;
+        if (skip !== "match") {
+          if (this.filters.match === "with" && !it.bugs.some(b => b.verdict === "match")) return false;
+          if (this.filters.match === "unsure") {
+            if (it.bugs.length === 0) return false;
+            if (it.bugs.some(b => b.verdict === "match")) return false;
+          }
+          if (this.filters.match === "none" && it.bugs.length !== 0) return false;
         }
-        if (this.filters.match === "none") {
-          if (it.bugs.some(b => b.verdict === "match")) return false;
-        }
-        if (cutoff && new Date(it.posted_at) < cutoff) return false;
+        if (skip !== "date" && cutoff && new Date(it.posted_at) < cutoff) return false;
         return true;
       });
+    },
+
+    get filteredItems() {
+      return this.itemsWithoutFilter(null);
+    },
+
+    get displaySources() {
+      const items = this.itemsWithoutFilter("sources");
+      const counter = {};
+      for (const it of items) counter[it.source] = (counter[it.source] || 0) + 1;
+      // Include all known sources, even if count is 0 under current filters,
+      // so the user can always re-add them.
+      return this.data.sources
+        .map(s => ({ name: s.name, count: counter[s.name] || 0 }))
+        .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+    },
+
+    get displayDomains() {
+      const items = this.itemsWithoutFilter("domains");
+      const counter = {};
+      for (const it of items) {
+        if (it.domain) counter[it.domain] = (counter[it.domain] || 0) + 1;
+      }
+      // Start from the pre-aggregated top-20 (so we always have a reasonable
+      // default list), plus any currently-selected domains so they don't
+      // vanish when their count drops to 0.
+      const names = new Set(this.data.domains_top.map(d => d.name));
+      this.filters.domains.forEach(d => names.add(d));
+      let entries = [...names]
+        .map(name => ({ name, count: counter[name] || 0 }))
+        .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+      const q = this.filters.domainSearch.toLowerCase().trim();
+      if (q) {
+        // When typing, search the full domain universe (not just the top-20).
+        const seen = new Set(entries.map(d => d.name));
+        for (const name of Object.keys(counter)) {
+          if (!seen.has(name)) entries.push({ name, count: counter[name] });
+        }
+        entries = entries.filter(d => d.name.toLowerCase().includes(q))
+                         .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+      } else {
+        // Hide 0-count entries unless they're currently selected.
+        entries = entries.filter(d => d.count > 0 || this.filters.domains.has(d.name));
+      }
+      return entries;
     },
     get sortedItems() {
       const items = [...this.filteredItems];
@@ -131,12 +178,6 @@ function dashboard() {
       items.sort(cmp[this.sort] || cmp.newest);
       return items;
     },
-    get topDomainsFiltered() {
-      const q = this.filters.domainSearch.toLowerCase().trim();
-      if (!q) return this.data.domains_top;
-      return this.data.domains_top.filter(d => d.name.toLowerCase().includes(q));
-    },
-
     _dateCutoff() {
       if (this.filters.date === "all") return null;
       const days = this.filters.date === "7d" ? 7 : this.filters.date === "30d" ? 30 : null;
@@ -196,6 +237,13 @@ function dashboard() {
     },
 
     // -- formatting --
+
+    urgencyClass(u) {
+      if (u === null || u === undefined) return "";
+      if (u >= 70) return "chip-urg-high";
+      if (u >= 40) return "chip-urg-medium";
+      return "chip-urg-low";
+    },
 
     relativeTime(iso) {
       if (!iso) return "";
