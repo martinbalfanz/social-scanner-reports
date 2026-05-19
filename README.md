@@ -2,26 +2,26 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-19T00:44:49.087178+00:00 · Last scan: 2026-05-19T00:10:18.307729+00:00_
+_Generated: 2026-05-19T06:06:54.943000+00:00 · Last scan: 2026-05-19T06:05:01.055455+00:00_
 
 ## Headlines
 
 | | Count |
 |---|---:|
-| Posts pulled across all sources | 9,232 |
-| Posts classified relevant | **344** |
-| ↳ Webcompat with a domain | 128 |
+| Posts pulled across all sources | 9,484 |
+| Posts classified relevant | **358** |
+| ↳ Webcompat with a domain | 131 |
 | ↳ Webcompat without a clear domain | 26 |
-| ↳ Firefox platform issues | 187 |
+| ↳ Firefox platform issues | 197 |
 
 ### Bugs on file vs potentially new
 
 | Bucket | Items | With likely match | Potentially new |
 |---|---:|---:|---:|
-| Webcompat (with domain) | 128 | 31 | **97** |
-| Firefox platform | 187 | 9 | **178** |
+| Webcompat (with domain) | 131 | 32 | **99** |
+| Firefox platform | 197 | 9 | **188** |
 
-**301 actionable items** (no clear matching bug filed): 97 webcompat-with-domain, 26 webcompat-no-domain, 178 platform.
+**313 actionable items** (no clear matching bug filed): 99 webcompat-with-domain, 26 webcompat-no-domain, 188 platform.
 
 ## Charts
 
@@ -32,15 +32,15 @@ xychart-beta
     title "Relevant items per day"
     x-axis ["05-06", "05-07", "05-08", "05-09", "05-10", "05-11", "05-12", "05-13", "05-14", "05-15", "05-16", "05-17", "05-18", "05-19"]
     y-axis "Items" 0 --> 33
-    bar [18, 11, 12, 2, 5, 32, 12, 15, 24, 12, 8, 11, 11, 0]
+    bar [18, 11, 12, 2, 5, 32, 12, 15, 24, 12, 8, 11, 22, 3]
 ```
 
 ### Bugs on file vs potentially new
 
 ```mermaid
 pie showData title Likely on file vs potentially new
-    "Likely on file" : 40
-    "Potentially new" : 275
+    "Likely on file" : 41
+    "Potentially new" : 287
 ```
 
 ### Relevant items by source
@@ -49,8 +49,8 @@ pie showData title Likely on file vs potentially new
 xychart-beta
     title "Relevant items per source"
     x-axis ["bluesky", "reddit_comments", "reddit", "sumo", "github", "mastodon"]
-    y-axis "Items" 0 --> 112
-    bar [111, 103, 78, 34, 11, 7]
+    y-axis "Items" 0 --> 114
+    bar [113, 113, 78, 36, 11, 7]
 ```
 
 ### Top domains by report volume
@@ -58,21 +58,21 @@ xychart-beta
 ```mermaid
 xychart-beta
     title "Posts per domain"
-    x-axis ["youtube", "reddit", "bsky", "google", "facebook", "netflix", "twitch", "drive.google", "claude", "wix"]
+    x-axis ["youtube", "reddit", "bsky", "google", "netflix", "facebook", "twitch", "drive.google", "claude", "wix"]
     y-axis "Posts" 0 --> 27
-    bar [26, 17, 17, 7, 6, 5, 4, 2, 2, 1]
+    bar [26, 18, 17, 7, 6, 6, 4, 2, 2, 1]
 ```
 
 ## Trends (week over week)
 
-**93** relevant items this week vs **91** last week (+2, up).
+**107** relevant items this week vs **91** last week (+16, up).
 
 **Escalating domains** (≥2 more reports this week):
 - `youtube.com`: 1 → 16 (+15)
 
 **New domains** (no reports last week, ≥2 this week):
+- `netflix.com`: 5 reports
 - `google.com`: 4 reports
-- `netflix.com`: 4 reports
 
 ## Top clusters
 
@@ -81,11 +81,11 @@ Domains by report volume across the entire dataset:
 | Domain | Posts | Likely match on file | Potentially new |
 |---|---:|---:|---:|
 | `youtube.com` | 26 | 13 | **13** |
-| `reddit.com` | 17 | 1 | **16** |
+| `reddit.com` | 18 | 1 | **17** |
 | `bsky.app` | 17 | 7 | **10** |
 | `google.com` | 7 | 2 | **5** |
+| `netflix.com` | 6 | 5 | **1** |
 | `facebook.com` | 6 | 0 | **6** |
-| `netflix.com` | 5 | 4 | **1** |
 | `twitch.tv` | 4 | 0 | **4** |
 | `drive.google.com` | 2 | 1 | **1** |
 | `claude.ai` | 2 | 2 | **0** |
@@ -138,7 +138,8 @@ Platform reports the matcher confirmed against existing bugs:
 
 ## Latest reports
 
-- [2026-05-18](2026/2026-05/2026-05-18.md) — 11 items
+- [2026-05-19](2026/2026-05/2026-05-19.md) — 3 items
+- [2026-05-18](2026/2026-05/2026-05-18.md) — 22 items
 - [2026-05-17](2026/2026-05/2026-05-17.md) — 11 items
 - [2026-05-16](2026/2026-05/2026-05-16.md) — 8 items
 - [2026-05-15](2026/2026-05/2026-05-15.md) — 12 items
@@ -147,7 +148,6 @@ Platform reports the matcher confirmed against existing bugs:
 - [2026-05-12](2026/2026-05/2026-05-12.md) — 12 items
 - [2026-05-11](2026/2026-05/2026-05-11.md) — 32 items
 - [2026-05-10](2026/2026-05/2026-05-10.md) — 5 items
-- [2026-05-09](2026/2026-05/2026-05-09.md) — 2 items
 
 ## Browse
 
