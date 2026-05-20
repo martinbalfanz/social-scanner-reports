@@ -251,6 +251,37 @@ button.chip { cursor: pointer; }
   color: var(--fg-muted);
 }
 
+/* cluster UI */
+.item-cluster-summary {
+  font-size: 12px;
+  font-style: italic;
+  margin: 4px 0 6px 0;
+}
+.item-cluster-badge {
+  margin-top: 8px;
+  font-size: 11px;
+}
+.cluster-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 2px 8px;
+  font-size: 11px;
+  color: var(--fg-muted);
+  cursor: pointer;
+}
+.cluster-toggle:hover { color: var(--accent); border-color: var(--accent); }
+.item-members {
+  margin-top: 6px;
+  padding-left: 8px;
+  border-left: 2px solid var(--border);
+}
+.cluster-member {
+  padding: 3px 0;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
 /* responsive */
 @media (max-width: 720px) {
   .layout { flex-direction: column; }

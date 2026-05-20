@@ -15,6 +15,7 @@ function dashboard() {
       match: "all",
     },
     sort: "newest",
+    expanded: new Set(),
 
     init() {
       const node = document.getElementById("dashboard-data");
@@ -38,6 +39,12 @@ function dashboard() {
       this.filters[name] = new Set(s);
     },
     setFilter(name, value) { this.filters[name] = value; },
+    toggleExpand(id) {
+      if (this.expanded.has(id)) this.expanded.delete(id);
+      else this.expanded.add(id);
+      // Replace the Set so Alpine sees the change
+      this.expanded = new Set(this.expanded);
+    },
     resetFilters() {
       this.filters = {
         sources: new Set(this.data.sources.map(s => s.name)),
