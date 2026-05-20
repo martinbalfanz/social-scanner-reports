@@ -54,7 +54,7 @@ a:hover { text-decoration: underline; }
 .layout {
   display: flex;
   gap: 0;
-  min-height: calc(100vh - 96px);
+  min-height: calc(100vh - 48px);
 }
 .sidebar {
   flex: 0 0 240px;
@@ -249,14 +249,6 @@ button.chip { cursor: pointer; }
   text-align: center;
   padding: 60px 20px;
   color: var(--fg-muted);
-}
-
-/* footer */
-.footer {
-  padding: 10px 16px;
-  font-size: 11px;
-  border-top: 1px solid var(--border);
-  background: var(--bg-card);
 }
 
 /* responsive */
