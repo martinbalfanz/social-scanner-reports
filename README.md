@@ -2,26 +2,26 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-20T13:06:04.530027+00:00 · Last scan: 2026-05-20T13:05:03.010730+00:00_
+_Generated: 2026-05-20T14:06:27.761692+00:00 · Last scan: 2026-05-20T14:05:04.667475+00:00_
 
 ## Headlines
 
 | | Count |
 |---|---:|
-| Posts pulled across all sources | 10,487 |
-| Posts classified relevant | **411** |
-| ↳ Webcompat with a domain | 144 |
+| Posts pulled across all sources | 10,557 |
+| Posts classified relevant | **414** |
+| ↳ Webcompat with a domain | 146 |
 | ↳ Webcompat without a clear domain | 28 |
-| ↳ Firefox platform issues | 235 |
+| ↳ Firefox platform issues | 236 |
 
 ### Bugs on file vs potentially new
 
 | Bucket | Items | With likely match | Potentially new |
 |---|---:|---:|---:|
-| Webcompat (with domain) | 144 | 33 | **111** |
-| Firefox platform | 235 | 9 | **226** |
+| Webcompat (with domain) | 146 | 34 | **112** |
+| Firefox platform | 236 | 9 | **227** |
 
-**365 actionable items** (no clear matching bug filed): 111 webcompat-with-domain, 28 webcompat-no-domain, 226 platform.
+**367 actionable items** (no clear matching bug filed): 112 webcompat-with-domain, 28 webcompat-no-domain, 227 platform.
 
 ## Charts
 
@@ -32,15 +32,15 @@ xychart-beta
     title "Relevant items per day"
     x-axis ["05-07", "05-08", "05-09", "05-10", "05-11", "05-12", "05-13", "05-14", "05-15", "05-16", "05-17", "05-18", "05-19", "05-20"]
     y-axis "Items" 0 --> 35
-    bar [11, 12, 2, 5, 32, 13, 15, 24, 12, 8, 11, 22, 34, 19]
+    bar [11, 12, 2, 5, 32, 13, 15, 24, 12, 8, 11, 22, 34, 22]
 ```
 
 ### Bugs on file vs potentially new
 
 ```mermaid
 pie showData title Likely on file vs potentially new
-    "Likely on file" : 42
-    "Potentially new" : 337
+    "Likely on file" : 43
+    "Potentially new" : 339
 ```
 
 ### Relevant items by source
@@ -49,8 +49,8 @@ pie showData title Likely on file vs potentially new
 xychart-beta
     title "Relevant items per source"
     x-axis ["reddit_comments", "bluesky", "reddit", "sumo", "github", "mastodon", "mozfr"]
-    y-axis "Items" 0 --> 149
-    bar [148, 115, 83, 41, 14, 7, 3]
+    y-axis "Items" 0 --> 150
+    bar [149, 115, 83, 43, 14, 7, 3]
 ```
 
 ### Top domains by report volume
@@ -58,22 +58,23 @@ xychart-beta
 ```mermaid
 xychart-beta
     title "Posts per domain"
-    x-axis ["youtube", "reddit", "bsky", "google", "netflix", "facebook", "twitch", "id", "drive.google", "claude"]
+    x-axis ["youtube", "reddit", "bsky", "google", "facebook", "netflix", "twitch", "id", "drive.google", "claude"]
     y-axis "Posts" 0 --> 30
-    bar [29, 18, 17, 9, 6, 6, 4, 3, 2, 2]
+    bar [29, 18, 17, 10, 7, 6, 4, 3, 2, 2]
 ```
 
 ## Trends (week over week)
 
-**145** relevant items this week vs **93** last week (+52, up).
+**148** relevant items this week vs **93** last week (+55, up).
 
 **Escalating domains** (≥2 more reports this week):
 - `youtube.com`: 1 → 19 (+18)
-- `google.com`: 1 → 5 (+4)
+- `google.com`: 1 → 6 (+5)
 
 **New domains** (no reports last week, ≥2 this week):
 - `netflix.com`: 5 reports
 - `id.me`: 3 reports
+- `facebook.com`: 2 reports
 
 ## Top clusters
 
@@ -84,9 +85,9 @@ Domains by report volume across the entire dataset:
 | `youtube.com` | 29 | 14 | **15** |
 | `reddit.com` | 18 | 1 | **17** |
 | `bsky.app` | 17 | 7 | **10** |
-| `google.com` | 9 | 2 | **7** |
+| `google.com` | 10 | 3 | **7** |
+| `facebook.com` | 7 | 0 | **7** |
 | `netflix.com` | 6 | 5 | **1** |
-| `facebook.com` | 6 | 0 | **6** |
 | `twitch.tv` | 4 | 0 | **4** |
 | `id.me` | 3 | 0 | **3** |
 | `drive.google.com` | 2 | 1 | **1** |
@@ -96,6 +97,9 @@ Domains by report volume across the entire dataset:
 
 Top webcompat reports by urgency where the matcher found no likely match in Bugzilla or webcompat/web-bugs. These are the candidates for a new filing:
 
+- **`facebook.com`** · urgency 85 · sumo
+  reCAPTCHA broken on Facebook login after Firefox 151.0 update
+  · [post](https://support.mozilla.org/en-US/questions/1582718)
 - **`youtube.com`** · urgency 85 · reddit
   YouTube won't load at all in Firefox for 5+ days, works in Edge
   · [post](https://reddit.com/r/firefox/comments/1tcx3ha/youtube_wont_load_at_all/)
@@ -108,9 +112,6 @@ Top webcompat reports by urgency where the matcher found no likely match in Bugz
 - **`amazon.com`** · urgency 85 · sumo
   Firefox freezes during Amazon login/security interactions; purchase failures; Safari works fine.
   · [post](https://support.mozilla.org/en-US/questions/1580185)
-- **`att.com`** · urgency 82 · reddit
-  AT&T email login screen hangs and times out in Firefox only.
-  · [post](https://reddit.com/r/firefox/comments/1t218fe/mozilla_user_for_20_years_ff_is_now_the_only/)
 
 ## High-urgency Firefox platform issues
 
@@ -139,7 +140,7 @@ Platform reports the matcher confirmed against existing bugs:
 
 ## Latest reports
 
-- [2026-05-20](2026/2026-05/2026-05-20.md) — 19 items
+- [2026-05-20](2026/2026-05/2026-05-20.md) — 22 items
 - [2026-05-19](2026/2026-05/2026-05-19.md) — 34 items
 - [2026-05-18](2026/2026-05/2026-05-18.md) — 22 items
 - [2026-05-17](2026/2026-05/2026-05-17.md) — 11 items
