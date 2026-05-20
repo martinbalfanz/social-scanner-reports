@@ -2,26 +2,26 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-20T21:05:54.018880+00:00 · Last scan: 2026-05-20T21:05:02.674273+00:00_
+_Generated: 2026-05-20T22:05:51.113461+00:00 · Last scan: 2026-05-20T22:05:01.306581+00:00_
 
 ## Headlines
 
 | | Count |
 |---|---:|
-| Posts pulled across all sources | 10,864 |
-| Posts classified relevant | **433** |
+| Posts pulled across all sources | 10,907 |
+| Posts classified relevant | **435** |
 | ↳ Webcompat with a domain | 147 |
 | ↳ Webcompat without a clear domain | 28 |
-| ↳ Firefox platform issues | 254 |
+| ↳ Firefox platform issues | 256 |
 
 ### Bugs on file vs potentially new
 
 | Bucket | Items | With likely match | Potentially new |
 |---|---:|---:|---:|
 | Webcompat (with domain) | 147 | 34 | **113** |
-| Firefox platform | 254 | 10 | **244** |
+| Firefox platform | 256 | 10 | **246** |
 
-**385 actionable items** (no clear matching bug filed): 113 webcompat-with-domain, 28 webcompat-no-domain, 244 platform.
+**387 actionable items** (no clear matching bug filed): 113 webcompat-with-domain, 28 webcompat-no-domain, 246 platform.
 
 ## Charts
 
@@ -31,8 +31,8 @@ _Generated: 2026-05-20T21:05:54.018880+00:00 · Last scan: 2026-05-20T21:05:02.6
 xychart-beta
     title "Relevant items per day"
     x-axis ["05-07", "05-08", "05-09", "05-10", "05-11", "05-12", "05-13", "05-14", "05-15", "05-16", "05-17", "05-18", "05-19", "05-20"]
-    y-axis "Items" 0 --> 42
-    bar [11, 12, 2, 5, 32, 13, 15, 24, 12, 8, 11, 22, 34, 41]
+    y-axis "Items" 0 --> 44
+    bar [11, 12, 2, 5, 32, 13, 15, 24, 12, 8, 11, 22, 34, 43]
 ```
 
 ### Bugs on file vs potentially new
@@ -40,7 +40,7 @@ xychart-beta
 ```mermaid
 pie showData title Likely on file vs potentially new
     "Likely on file" : 44
-    "Potentially new" : 357
+    "Potentially new" : 359
 ```
 
 ### Relevant items by source
@@ -49,8 +49,8 @@ pie showData title Likely on file vs potentially new
 xychart-beta
     title "Relevant items per source"
     x-axis ["reddit_comments", "bluesky", "reddit", "sumo", "github", "mastodon", "mozfr"]
-    y-axis "Items" 0 --> 165
-    bar [164, 115, 86, 44, 14, 7, 3]
+    y-axis "Items" 0 --> 167
+    bar [166, 115, 86, 44, 14, 7, 3]
 ```
 
 ### Top domains by report volume
@@ -65,7 +65,7 @@ xychart-beta
 
 ## Trends (week over week)
 
-**167** relevant items this week vs **93** last week (+74, up).
+**169** relevant items this week vs **93** last week (+76, up).
 
 **Escalating domains** (≥2 more reports this week):
 - `youtube.com`: 1 → 19 (+18)
@@ -119,14 +119,14 @@ Top platform-level reports by urgency. These don't tie to a single domain:
 
 - urgency 95 · Firefox on Android freezes, locks up OS, has bookmark bugs, and causes site lockups.
   · [post](https://reddit.com/r/firefox/comments/1t9xssv/firefox_unusable_on_android_p9/)
+- urgency 95 · Firefox update caused loss of entire user profile and years of bookmarks
+  · [post](https://reddit.com/r/firefox/comments/1thtq98/just_lost_my_whole_profile_and_years_of_bookmark/omxynl2/)
 - urgency 85 · Firefox showing certificate errors on all pages including mozilla.org
   · [post](https://bsky.app/profile/lexomatic.bsky.social/post/3mkkxe3o3ws2h)
 - urgency 85 · Firefox 150 silently fails HTTP Basic Auth, returning NS_ERROR_FAILURE instead of prompting for credentials.
   · [post](https://reddit.com/r/firefox/comments/1t2t005/firefox_150_silently_fails_http_basic_auth_ns/)
 - urgency 85 · Firefox Android won't load any web pages after recent update
   · [post](https://reddit.com/r/firefox/comments/1t0hh6t/firefox_android_not_working_after_the_most_recent/)
-- urgency 85 · Firefox 149.0 crashes repeatedly when moving tabs; assertion error "Unhandled external image format"
-  · [post](https://reddit.com/r/firefox/comments/1szcli8/firefox_1490_64bit_crashing_but_i_dont_know_what/)
 
 ## Platform issues already on file
 
@@ -140,7 +140,7 @@ Platform reports the matcher confirmed against existing bugs:
 
 ## Latest reports
 
-- [2026-05-20](2026/2026-05/2026-05-20.md) — 41 items
+- [2026-05-20](2026/2026-05/2026-05-20.md) — 43 items
 - [2026-05-19](2026/2026-05/2026-05-19.md) — 34 items
 - [2026-05-18](2026/2026-05/2026-05-18.md) — 22 items
 - [2026-05-17](2026/2026-05/2026-05-17.md) — 11 items
