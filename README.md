@@ -2,26 +2,26 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-21T07:12:56.047364+00:00 · Last scan: 2026-05-21T07:12:00.762587+00:00_
+_Generated: 2026-05-21T09:10:14.658400+00:00 · Last scan: 2026-05-21T08:05:05.666420+00:00_
 
 ## Headlines
 
 | | Count |
 |---|---:|
-| Posts pulled across all sources | 11,201 |
-| Posts classified relevant | **447** |
-| ↳ Webcompat with a domain | 147 |
-| ↳ Webcompat without a clear domain | 28 |
-| ↳ Firefox platform issues | 268 |
+| Posts pulled across all sources | 11,235 |
+| Posts classified relevant | **690** |
+| ↳ Webcompat with a domain | 214 |
+| ↳ Webcompat without a clear domain | 25 |
+| ↳ Firefox platform issues | 451 |
 
 ### Bugs on file vs potentially new
 
 | Bucket | Items | With likely match | Potentially new |
 |---|---:|---:|---:|
-| Webcompat (with domain) | 147 | 34 | **113** |
-| Firefox platform | 268 | 10 | **258** |
+| Webcompat (with domain) | 214 | 69 | **145** |
+| Firefox platform | 451 | 32 | **419** |
 
-**399 actionable items** (no clear matching bug filed): 113 webcompat-with-domain, 28 webcompat-no-domain, 258 platform.
+**589 actionable items** (no clear matching bug filed): 145 webcompat-with-domain, 25 webcompat-no-domain, 419 platform.
 
 ## Charts
 
@@ -31,16 +31,16 @@ _Generated: 2026-05-21T07:12:56.047364+00:00 · Last scan: 2026-05-21T07:12:00.7
 xychart-beta
     title "Relevant items per day"
     x-axis ["05-08", "05-09", "05-10", "05-11", "05-12", "05-13", "05-14", "05-15", "05-16", "05-17", "05-18", "05-19", "05-20", "05-21"]
-    y-axis "Items" 0 --> 48
-    bar [12, 2, 5, 32, 13, 15, 24, 12, 8, 11, 22, 34, 47, 8]
+    y-axis "Items" 0 --> 60
+    bar [18, 11, 9, 59, 24, 25, 54, 19, 14, 24, 35, 32, 48, 10]
 ```
 
 ### Bugs on file vs potentially new
 
 ```mermaid
 pie showData title Likely on file vs potentially new
-    "Likely on file" : 44
-    "Potentially new" : 371
+    "Likely on file" : 101
+    "Potentially new" : 564
 ```
 
 ### Relevant items by source
@@ -48,9 +48,9 @@ pie showData title Likely on file vs potentially new
 ```mermaid
 xychart-beta
     title "Relevant items per source"
-    x-axis ["reddit_comments", "bluesky", "reddit", "sumo", "github", "mastodon", "mozfr"]
-    y-axis "Items" 0 --> 175
-    bar [174, 115, 87, 47, 14, 7, 3]
+    x-axis ["reddit_comments", "bluesky", "reddit", "sumo", "github", "mastodon", "mozfr", "hackernews"]
+    y-axis "Items" 0 --> 300
+    bar [299, 152, 113, 54, 52, 15, 3, 2]
 ```
 
 ### Top domains by report volume
@@ -58,23 +58,24 @@ xychart-beta
 ```mermaid
 xychart-beta
     title "Posts per domain"
-    x-axis ["youtube", "reddit", "bsky", "google", "facebook", "netflix", "twitch", "id", "instagram", "drive.google"]
-    y-axis "Posts" 0 --> 30
-    bar [29, 18, 17, 10, 7, 6, 4, 3, 2, 2]
+    x-axis ["youtube", "bsky", "reddit", "google", "facebook", "netflix", "twitch", "github", "gmail", "bluesky"]
+    y-axis "Posts" 0 --> 44
+    bar [43, 21, 19, 14, 9, 7, 6, 6, 5, 5]
 ```
 
 ## Trends (week over week)
 
-**166** relevant items this week vs **90** last week (+76, up).
+**236** relevant items this week vs **169** last week (+67, up).
 
 **Escalating domains** (≥2 more reports this week):
-- `google.com`: 1 → 6 (+5)
+- `youtube.com`: 3 → 24 (+21)
+- `google.com`: 3 → 7 (+4)
 
 **New domains** (no reports last week, ≥2 this week):
-- `youtube.com`: 19 reports
-- `netflix.com`: 5 reports
+- `netflix.com`: 6 reports
 - `id.me`: 3 reports
 - `facebook.com`: 2 reports
+- `twitter.com`: 2 reports
 
 ## Top clusters
 
@@ -82,74 +83,74 @@ Domains by report volume across the entire dataset:
 
 | Domain | Posts | Likely match on file | Potentially new |
 |---|---:|---:|---:|
-| `youtube.com` | 29 | 14 | **15** |
-| `reddit.com` | 18 | 1 | **17** |
-| `bsky.app` | 17 | 7 | **10** |
-| `google.com` | 10 | 3 | **7** |
-| `facebook.com` | 7 | 0 | **7** |
-| `netflix.com` | 6 | 5 | **1** |
-| `twitch.tv` | 4 | 0 | **4** |
-| `id.me` | 3 | 0 | **3** |
-| `instagram.com` | 2 | 0 | **2** |
-| `drive.google.com` | 2 | 1 | **1** |
+| `youtube.com` | 43 | 27 | **16** |
+| `bsky.app` | 21 | 11 | **10** |
+| `reddit.com` | 19 | 4 | **15** |
+| `google.com` | 14 | 8 | **6** |
+| `facebook.com` | 9 | 0 | **9** |
+| `netflix.com` | 7 | 6 | **1** |
+| `twitch.tv` | 6 | 5 | **1** |
+| `github.com` | 6 | 0 | **6** |
+| `gmail.com` | 5 | 0 | **5** |
+| `bluesky.app` | 5 | 1 | **4** |
 
 ## High-urgency items with no matching bug
 
 Top webcompat reports by urgency where the matcher found no likely match in Bugzilla or webcompat/web-bugs. These are the candidates for a new filing:
 
+- **`facebook.com`** · urgency 85 · bluesky
+  Cannot log in to Facebook in Firefox 150, but login works in Edge.
+  · [post](https://bsky.app/profile/mozilla.activitypub.awakari.com.ap.brid.gy/post/3mk52zlum25o2)
+- **`reddit.com`** · urgency 85 · reddit_comments
+  Reddit doesn't work at all in Firefox
+  · [post](https://reddit.com/r/firefox/comments/1te90if/reddit_doesnt_work_at_all/omhsqje/)
 - **`facebook.com`** · urgency 85 · sumo
-  reCAPTCHA broken on Facebook login after Firefox 151.0 update
+  reCAPTCHA login broken on Facebook after Firefox 151.0 update
   · [post](https://support.mozilla.org/en-US/questions/1582718)
-- **`youtube.com`** · urgency 85 · reddit
-  YouTube won't load at all in Firefox for 5+ days, works in Edge
-  · [post](https://reddit.com/r/firefox/comments/1tcx3ha/youtube_wont_load_at_all/)
-- **`coingecko.com`** · urgency 85 · reddit_comments
-  Firefox runs out of memory and becomes unresponsive on coingecko portfolio and lastminute.com search pages.
-  · [post](https://reddit.com/r/firefox/comments/1t7uf0r/is_firefox_having_a_memory_leak_right_now/ol56wpe/)
-- **`google.com`** · urgency 85 · mastodon
-  Google Search broken on Firefox Android for hours; requests return malformed HTML.
-  · [post](https://mastodon.cloud/@karlcow/111726266200532862)
-- **`amazon.com`** · urgency 85 · sumo
-  Firefox freezes during Amazon login/security interactions; purchase failures; Safari works fine.
-  · [post](https://support.mozilla.org/en-US/questions/1580185)
+- **`supabase.com`** · urgency 85 · github
+  Supabase Control Panel throws DOM error 'insertBefore' on Node preventing any work in product; happens across Firefox, C
+  · [post](https://github.com/facebook/react/issues/35698)
+- **`youtube.com`** · urgency 80 · reddit_comments
+  YouTube interface bug causes excessive RAM usage (7GB+) and browser lag/freezing in Firefox.
+  · [post](https://reddit.com/r/firefox/comments/1t3p7uy/seeing_higher_ram_usage_in_firefox_lately_this/olot1qw/)
 
 ## High-urgency Firefox platform issues
 
 Top platform-level reports by urgency. These don't tie to a single domain:
 
-- urgency 95 · Firefox on Android freezes, locks up OS, has bookmark bugs, and causes site lockups.
-  · [post](https://reddit.com/r/firefox/comments/1t9xssv/firefox_unusable_on_android_p9/)
-- urgency 95 · Firefox update caused loss of entire user profile and years of bookmarks
+- urgency 95 · Firefox 151 on Android deletes local saved files when closing incognito tabs.
+  · [post](https://bsky.app/profile/piunikaweb.bsky.social/post/3mmdw3ys5u22v)
+- urgency 95 · Firefox crashes after a few minutes due to uncontrolled memory leak consuming all available RAM.
+  · [post](https://support.mozilla.org/en-US/questions/1581080)
+- urgency 95 · User lost entire Firefox profile and years of bookmarks after updating to latest version.
   · [post](https://reddit.com/r/firefox/comments/1thtq98/just_lost_my_whole_profile_and_years_of_bookmark/omxynl2/)
-- urgency 85 · Firefox showing certificate errors on all pages including mozilla.org
-  · [post](https://bsky.app/profile/lexomatic.bsky.social/post/3mkkxe3o3ws2h)
-- urgency 85 · Firefox 150 silently fails HTTP Basic Auth, returning NS_ERROR_FAILURE instead of prompting for credentials.
-  · [post](https://reddit.com/r/firefox/comments/1t2t005/firefox_150_silently_fails_http_basic_auth_ns/)
-- urgency 85 · Firefox Android won't load any web pages after recent update
-  · [post](https://reddit.com/r/firefox/comments/1t0hh6t/firefox_android_not_working_after_the_most_recent/)
+- urgency 85 · Firefox completely unable to search or load pages after updates; internet confirmed working in other browsers.
+  · [post](https://reddit.com/r/firefox/comments/1t570zf/firefox_not_working_at_all/)
+- urgency 85 · Firefox on mobile randomly reloads and freezes when switching tabs.
+  · [post](https://bsky.app/profile/rismith.bsky.social/post/3mkgwdris322r)
 
 ## Platform issues already on file
 
 Platform reports the matcher confirmed against existing bugs:
 
-- **Firefox vertical tabs sidebar gets stuck expanded, blocking page and settings access.** → [BMO#1987303](https://bugzilla.mozilla.org/show_bug.cgi?id=1987303)  _When Windows animations are disabled, sometimes the vertical tabs sidebar gets s_
-- **Firefox Sync not syncing bookmarks across Android and Ubuntu devices.** → [BMO#1972182](https://bugzilla.mozilla.org/show_bug.cgi?id=1972182)  _Issue with syncing Bookmarks on Firefox Android_
-- **Right-click context menu not working in Firefox on NixOS** → [BMO#1762425](https://bugzilla.mozilla.org/show_bug.cgi?id=1762425)  _Firefox right click context menu not working properly in bspwm_
-- **Firefox 151: keyboard search and dropdown UI elements broken until refresh.** → [BMO#851472](https://bugzilla.mozilla.org/show_bug.cgi?id=851472)  _Counter-intuitive selection of dropdown elements using keyboard_
-- **Audio not working on video players in Firefox** → [BMO#1933319](https://bugzilla.mozilla.org/show_bug.cgi?id=1933319)  _not working video and audio playback in video players_
+- **Firefox won't load any pages while other browsers work fine, acts as if offline** → [BMO#1802960](https://bugzilla.mozilla.org/show_bug.cgi?id=1802960)  _YouTube history and other pages intermittently fails to fully load_
+- **Firefox Sync bookmarks not syncing between Android and Ubuntu despite multiple troubleshoo** → [BMO#1972182](https://bugzilla.mozilla.org/show_bug.cgi?id=1972182)  _Issue with syncing Bookmarks on Firefox Android_
+- **Firefox 149.0 crashes repeatedly when moving tabs due to unhandled external image format a** → [BMO#1865713](https://bugzilla.mozilla.org/show_bug.cgi?id=1865713)  _Assertion failure: false (Unhandled external image format), at /gfx/webrender_bi_
+- **Right-click context menu not working in Firefox.** → [BMO#1762425](https://bugzilla.mozilla.org/show_bug.cgi?id=1762425)  _Firefox right click context menu not working properly in bspwm_
+- **Right-click context menu not working in Firefox.** → [BMO#2040706](https://bugzilla.mozilla.org/show_bug.cgi?id=2040706)  _Right-click context menus stop working partway through a session on native Wayla_
 
 ## Latest reports
 
-- [2026-05-21](2026/2026-05/2026-05-21.md) — 8 items
-- [2026-05-20](2026/2026-05/2026-05-20.md) — 47 items
-- [2026-05-19](2026/2026-05/2026-05-19.md) — 34 items
-- [2026-05-18](2026/2026-05/2026-05-18.md) — 22 items
-- [2026-05-17](2026/2026-05/2026-05-17.md) — 11 items
-- [2026-05-16](2026/2026-05/2026-05-16.md) — 8 items
-- [2026-05-15](2026/2026-05/2026-05-15.md) — 12 items
-- [2026-05-14](2026/2026-05/2026-05-14.md) — 24 items
-- [2026-05-13](2026/2026-05/2026-05-13.md) — 15 items
-- [2026-05-12](2026/2026-05/2026-05-12.md) — 13 items
+- [2026-05-21](2026/2026-05/2026-05-21.md) — 10 items
+- [2026-05-20](2026/2026-05/2026-05-20.md) — 48 items
+- [2026-05-19](2026/2026-05/2026-05-19.md) — 32 items
+- [2026-05-18](2026/2026-05/2026-05-18.md) — 35 items
+- [2026-05-17](2026/2026-05/2026-05-17.md) — 24 items
+- [2026-05-16](2026/2026-05/2026-05-16.md) — 14 items
+- [2026-05-15](2026/2026-05/2026-05-15.md) — 19 items
+- [2026-05-14](2026/2026-05/2026-05-14.md) — 54 items
+- [2026-05-13](2026/2026-05/2026-05-13.md) — 25 items
+- [2026-05-12](2026/2026-05/2026-05-12.md) — 24 items
 
 ## Browse
 

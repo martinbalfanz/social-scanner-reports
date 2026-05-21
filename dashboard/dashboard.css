@@ -136,6 +136,15 @@ button.chip { cursor: pointer; }
 .chip-urg-high   { background: #ffd0d0; color: #802020; border-color: #f0b8b8; font-weight: 700; }
 .chip-urg-medium { background: #ffe8c0; color: #804010; border-color: #f0d8a8; }
 .chip-urg-low    { background: #e8e8e8; color: #505050; }
+.chip-lang {
+  text-transform: uppercase;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: #f0e8d8;
+  color: #6b5022;
+  border-color: #e0d4b8;
+  letter-spacing: 0.05em;
+  cursor: help;
+}
 .reset {
   display: inline-block;
   margin-top: 6px;
