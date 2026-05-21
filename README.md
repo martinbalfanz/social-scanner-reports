@@ -2,26 +2,26 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-21T09:10:14.658400+00:00 · Last scan: 2026-05-21T08:05:05.666420+00:00_
+_Generated: 2026-05-21T10:06:25.573392+00:00 · Last scan: 2026-05-21T10:05:06.560169+00:00_
 
 ## Headlines
 
 | | Count |
 |---|---:|
-| Posts pulled across all sources | 11,235 |
-| Posts classified relevant | **690** |
+| Posts pulled across all sources | 11,316 |
+| Posts classified relevant | **693** |
 | ↳ Webcompat with a domain | 214 |
 | ↳ Webcompat without a clear domain | 25 |
-| ↳ Firefox platform issues | 451 |
+| ↳ Firefox platform issues | 454 |
 
 ### Bugs on file vs potentially new
 
 | Bucket | Items | With likely match | Potentially new |
 |---|---:|---:|---:|
 | Webcompat (with domain) | 214 | 69 | **145** |
-| Firefox platform | 451 | 32 | **419** |
+| Firefox platform | 454 | 33 | **421** |
 
-**589 actionable items** (no clear matching bug filed): 145 webcompat-with-domain, 25 webcompat-no-domain, 419 platform.
+**591 actionable items** (no clear matching bug filed): 145 webcompat-with-domain, 25 webcompat-no-domain, 421 platform.
 
 ## Charts
 
@@ -32,15 +32,15 @@ xychart-beta
     title "Relevant items per day"
     x-axis ["05-08", "05-09", "05-10", "05-11", "05-12", "05-13", "05-14", "05-15", "05-16", "05-17", "05-18", "05-19", "05-20", "05-21"]
     y-axis "Items" 0 --> 60
-    bar [18, 11, 9, 59, 24, 25, 54, 19, 14, 24, 35, 32, 48, 10]
+    bar [18, 11, 9, 59, 24, 25, 54, 19, 14, 24, 35, 32, 48, 13]
 ```
 
 ### Bugs on file vs potentially new
 
 ```mermaid
 pie showData title Likely on file vs potentially new
-    "Likely on file" : 101
-    "Potentially new" : 564
+    "Likely on file" : 102
+    "Potentially new" : 566
 ```
 
 ### Relevant items by source
@@ -48,9 +48,9 @@ pie showData title Likely on file vs potentially new
 ```mermaid
 xychart-beta
     title "Relevant items per source"
-    x-axis ["reddit_comments", "bluesky", "reddit", "sumo", "github", "mastodon", "mozfr", "hackernews"]
-    y-axis "Items" 0 --> 300
-    bar [299, 152, 113, 54, 52, 15, 3, 2]
+    x-axis ["reddit_comments", "bluesky", "reddit", "github", "sumo", "mastodon", "mozfr", "hackernews"]
+    y-axis "Items" 0 --> 301
+    bar [300, 152, 113, 54, 54, 15, 3, 2]
 ```
 
 ### Top domains by report volume
@@ -65,7 +65,7 @@ xychart-beta
 
 ## Trends (week over week)
 
-**236** relevant items this week vs **169** last week (+67, up).
+**239** relevant items this week vs **169** last week (+70, up).
 
 **Escalating domains** (≥2 more reports this week):
 - `youtube.com`: 3 → 24 (+21)
@@ -118,8 +118,6 @@ Top webcompat reports by urgency where the matcher found no likely match in Bugz
 
 Top platform-level reports by urgency. These don't tie to a single domain:
 
-- urgency 95 · Firefox 151 on Android deletes local saved files when closing incognito tabs.
-  · [post](https://bsky.app/profile/piunikaweb.bsky.social/post/3mmdw3ys5u22v)
 - urgency 95 · Firefox crashes after a few minutes due to uncontrolled memory leak consuming all available RAM.
   · [post](https://support.mozilla.org/en-US/questions/1581080)
 - urgency 95 · User lost entire Firefox profile and years of bookmarks after updating to latest version.
@@ -128,20 +126,22 @@ Top platform-level reports by urgency. These don't tie to a single domain:
   · [post](https://reddit.com/r/firefox/comments/1t570zf/firefox_not_working_at_all/)
 - urgency 85 · Firefox on mobile randomly reloads and freezes when switching tabs.
   · [post](https://bsky.app/profile/rismith.bsky.social/post/3mkgwdris322r)
+- urgency 85 · Firefox 148.0 not loading multiple websites including banks.
+  · [post](https://bsky.app/profile/mozilla.activitypub.awakari.com.ap.brid.gy/post/3mg2djtcm4jp2)
 
 ## Platform issues already on file
 
 Platform reports the matcher confirmed against existing bugs:
 
 - **Firefox won't load any pages while other browsers work fine, acts as if offline** → [BMO#1802960](https://bugzilla.mozilla.org/show_bug.cgi?id=1802960)  _YouTube history and other pages intermittently fails to fully load_
+- **Firefox mobile auto-deletes downloaded files after update without user consent or warning.** → [BMO#947536](https://bugzilla.mozilla.org/show_bug.cgi?id=947536)  _When Firefox restarts after crash, it deletes active downloaded files, and start_
 - **Firefox Sync bookmarks not syncing between Android and Ubuntu despite multiple troubleshoo** → [BMO#1972182](https://bugzilla.mozilla.org/show_bug.cgi?id=1972182)  _Issue with syncing Bookmarks on Firefox Android_
 - **Firefox 149.0 crashes repeatedly when moving tabs due to unhandled external image format a** → [BMO#1865713](https://bugzilla.mozilla.org/show_bug.cgi?id=1865713)  _Assertion failure: false (Unhandled external image format), at /gfx/webrender_bi_
 - **Right-click context menu not working in Firefox.** → [BMO#1762425](https://bugzilla.mozilla.org/show_bug.cgi?id=1762425)  _Firefox right click context menu not working properly in bspwm_
-- **Right-click context menu not working in Firefox.** → [BMO#2040706](https://bugzilla.mozilla.org/show_bug.cgi?id=2040706)  _Right-click context menus stop working partway through a session on native Wayla_
 
 ## Latest reports
 
-- [2026-05-21](2026/2026-05/2026-05-21.md) — 10 items
+- [2026-05-21](2026/2026-05/2026-05-21.md) — 13 items
 - [2026-05-20](2026/2026-05/2026-05-20.md) — 48 items
 - [2026-05-19](2026/2026-05/2026-05-19.md) — 32 items
 - [2026-05-18](2026/2026-05/2026-05-18.md) — 35 items
