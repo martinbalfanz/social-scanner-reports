@@ -2,11 +2,25 @@
 // The data payload is inlined into the page via <script type="application/json"
 // id="dashboard-data">.
 
+const ALL_OS = ["unspecified", "mobile", "ios", "android",
+                "desktop", "macos", "linux", "windows"];
+const OS_LABELS = {
+  unspecified: "unspecified",
+  mobile: "mobile",
+  ios: "iOS",
+  android: "Android",
+  desktop: "desktop",
+  macos: "macOS",
+  linux: "Linux",
+  windows: "Windows",
+};
+
 function dashboard() {
   return {
     data: { items: [], timeline: { buckets: [], older: { webcompat: 0, platform: 0 } }, sources: [], domains_top: [], generated_at: "" },
     filters: {
       sources: new Set(),
+      os: new Set(ALL_OS),
       category: "all",
       date: "7d",
       domains: new Set(),
@@ -48,6 +62,7 @@ function dashboard() {
     resetFilters() {
       this.filters = {
         sources: new Set(this.data.sources.map(s => s.name)),
+        os: new Set(ALL_OS),
         category: "all",
         date: "7d",
         domains: new Set(),
@@ -65,6 +80,10 @@ function dashboard() {
       const allSources = new Set(this.data.sources.map(s => s.name));
       if (!this._setEq(this.filters.sources, allSources)) {
         parts.push("sources=" + [...this.filters.sources].sort().join(","));
+      }
+      const allOS = new Set(ALL_OS);
+      if (!this._setEq(this.filters.os, allOS)) {
+        parts.push("os=" + [...this.filters.os].sort().join(","));
       }
       if (this.filters.category !== "all") parts.push("category=" + this.filters.category);
       if (this.filters.date !== "7d") parts.push("date=" + this.filters.date);
@@ -89,6 +108,9 @@ function dashboard() {
       if (params.has("sources")) {
         this.filters.sources = new Set(params.get("sources").split(",").filter(Boolean));
       }
+      if (params.has("os")) {
+        this.filters.os = new Set(params.get("os").split(",").filter(Boolean));
+      }
       if (params.has("category")) this.filters.category = params.get("category");
       if (params.has("date")) this.filters.date = params.get("date");
       if (params.has("domain")) {
@@ -112,6 +134,10 @@ function dashboard() {
       const cutoff = this._dateCutoff();
       return this.data.items.filter(it => {
         if (skip !== "sources" && !this.filters.sources.has(it.source)) return false;
+        if (skip !== "os") {
+          const itOS = it.os || "unspecified";
+          if (!this.filters.os.has(itOS)) return false;
+        }
         if (skip !== "category" && this.filters.category !== "all" && it.category !== this.filters.category) return false;
         if (skip !== "domains" && this.filters.domains.size > 0) {
           if (!it.domain || !this.filters.domains.has(it.domain)) return false;
@@ -143,6 +169,21 @@ function dashboard() {
       return this.data.sources
         .map(s => ({ name: s.name, count: counter[s.name] || 0 }))
         .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+    },
+
+    get displayOS() {
+      const items = this.itemsWithoutFilter("os");
+      const counter = {};
+      for (const it of items) {
+        const key = it.os || "unspecified";
+        counter[key] = (counter[key] || 0) + 1;
+      }
+      // Keep the visual order fixed (form-factor groups, specific then generic).
+      return ALL_OS.map(name => ({
+        name,
+        label: OS_LABELS[name],
+        count: counter[name] || 0,
+      }));
     },
 
     get displayDomains() {
@@ -244,6 +285,10 @@ function dashboard() {
     },
 
     // -- formatting --
+
+    osLabel(os) {
+      return OS_LABELS[os] || os;
+    },
 
     urgencyClass(u) {
       if (u === null || u === undefined) return "";

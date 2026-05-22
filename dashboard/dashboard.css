@@ -145,6 +145,14 @@ button.chip { cursor: pointer; }
   letter-spacing: 0.05em;
   cursor: help;
 }
+/* OS chips: green family for mobile, blue family for desktop. */
+.chip-os-mobile,
+.chip-os-ios,
+.chip-os-android  { background: #def0e2; color: #205038; border-color: #c2e2c8; }
+.chip-os-desktop,
+.chip-os-macos,
+.chip-os-linux,
+.chip-os-windows  { background: #e0e6f0; color: #2d3e62; border-color: #c8d0e0; }
 .reset {
   display: inline-block;
   margin-top: 6px;
