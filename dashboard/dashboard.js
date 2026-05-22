@@ -28,7 +28,7 @@ function dashboard() {
       triage: new Set(["new", "triaged"]),
       match: "all",
     },
-    sort: "newest",
+    sort: "recent_activity",
     expanded: new Set(),
 
     init() {
@@ -70,7 +70,7 @@ function dashboard() {
         triage: new Set(["new", "triaged"]),
         match: "all",
       };
-      this.sort = "newest";
+      this.sort = "recent_activity";
     },
 
     // -- URL hash sync --
@@ -95,7 +95,7 @@ function dashboard() {
         parts.push("triage=" + [...this.filters.triage].sort().join(","));
       }
       if (this.filters.match !== "all") parts.push("match=" + this.filters.match);
-      if (this.sort !== "newest") parts.push("sort=" + this.sort);
+      if (this.sort !== "recent_activity") parts.push("sort=" + this.sort);
       const next = parts.length ? "#" + parts.join("&") : "";
       if (next !== location.hash) {
         history.replaceState(null, "", next || location.pathname);
@@ -217,13 +217,15 @@ function dashboard() {
     },
     get sortedItems() {
       const items = [...this.filteredItems];
+      const activityOf = (it) => it.latest_activity_at || it.posted_at;
       const cmp = {
+        recent_activity: (a, b) => activityOf(b).localeCompare(activityOf(a)),
         newest:  (a, b) => b.posted_at.localeCompare(a.posted_at),
         oldest:  (a, b) => a.posted_at.localeCompare(b.posted_at),
         urgency: (a, b) => (b.urgency || 0) - (a.urgency || 0),
         domain:  (a, b) => (a.domain || "~platform").localeCompare(b.domain || "~platform"),
       };
-      items.sort(cmp[this.sort] || cmp.newest);
+      items.sort(cmp[this.sort] || cmp.recent_activity);
       return items;
     },
     _dateCutoff() {
@@ -288,6 +290,14 @@ function dashboard() {
 
     osLabel(os) {
       return OS_LABELS[os] || os;
+    },
+
+    hasNewActivity(item) {
+      // Only show the "active Xm ago" hint when the cluster has actual
+      // additional members AND those members are newer than the canonical.
+      if (!item.latest_activity_at) return false;
+      if (item.member_count <= 1) return false;
+      return item.latest_activity_at > item.posted_at;
     },
 
     urgencyClass(u) {
