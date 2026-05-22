@@ -4,6 +4,19 @@
 
 const ALL_OS = ["unspecified", "mobile", "ios", "android",
                 "desktop", "macos", "linux", "windows"];
+const ALL_CONFIDENCE = ["high", "medium", "low", "unspecified"];
+const CONFIDENCE_LABELS = {
+  high:        "high (70+)",
+  medium:      "medium (40–69)",
+  low:         "low (<40)",
+  unspecified: "unspecified",
+};
+function _confidenceBucket(c) {
+  if (c === null || c === undefined) return "unspecified";
+  if (c >= 70) return "high";
+  if (c >= 40) return "medium";
+  return "low";
+}
 const OS_LABELS = {
   unspecified: "unspecified",
   mobile: "mobile",
@@ -21,6 +34,7 @@ function dashboard() {
     filters: {
       sources: new Set(),
       os: new Set(ALL_OS),
+      confidence: new Set(["high", "medium"]),
       category: "all",
       date: "7d",
       domains: new Set(),
@@ -63,6 +77,7 @@ function dashboard() {
       this.filters = {
         sources: new Set(this.data.sources.map(s => s.name)),
         os: new Set(ALL_OS),
+        confidence: new Set(["high", "medium"]),
         category: "all",
         date: "7d",
         domains: new Set(),
@@ -84,6 +99,10 @@ function dashboard() {
       const allOS = new Set(ALL_OS);
       if (!this._setEq(this.filters.os, allOS)) {
         parts.push("os=" + [...this.filters.os].sort().join(","));
+      }
+      const defConf = new Set(["high", "medium"]);
+      if (!this._setEq(this.filters.confidence, defConf)) {
+        parts.push("confidence=" + [...this.filters.confidence].sort().join(","));
       }
       if (this.filters.category !== "all") parts.push("category=" + this.filters.category);
       if (this.filters.date !== "7d") parts.push("date=" + this.filters.date);
@@ -111,6 +130,9 @@ function dashboard() {
       if (params.has("os")) {
         this.filters.os = new Set(params.get("os").split(",").filter(Boolean));
       }
+      if (params.has("confidence")) {
+        this.filters.confidence = new Set(params.get("confidence").split(",").filter(Boolean));
+      }
       if (params.has("category")) this.filters.category = params.get("category");
       if (params.has("date")) this.filters.date = params.get("date");
       if (params.has("domain")) {
@@ -137,6 +159,9 @@ function dashboard() {
         if (skip !== "os") {
           const itOS = it.os || "unspecified";
           if (!this.filters.os.has(itOS)) return false;
+        }
+        if (skip !== "confidence") {
+          if (!this.filters.confidence.has(_confidenceBucket(it.confidence))) return false;
         }
         if (skip !== "category" && this.filters.category !== "all" && it.category !== this.filters.category) return false;
         if (skip !== "domains" && this.filters.domains.size > 0) {
@@ -169,6 +194,20 @@ function dashboard() {
       return this.data.sources
         .map(s => ({ name: s.name, count: counter[s.name] || 0 }))
         .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+    },
+
+    get displayConfidence() {
+      const items = this.itemsWithoutFilter("confidence");
+      const counter = {};
+      for (const it of items) {
+        const k = _confidenceBucket(it.confidence);
+        counter[k] = (counter[k] || 0) + 1;
+      }
+      return ALL_CONFIDENCE.map(name => ({
+        name,
+        label: CONFIDENCE_LABELS[name],
+        count: counter[name] || 0,
+      }));
     },
 
     get displayOS() {
@@ -305,6 +344,13 @@ function dashboard() {
       if (u >= 70) return "chip-urg-high";
       if (u >= 40) return "chip-urg-medium";
       return "chip-urg-low";
+    },
+
+    confidenceClass(c) {
+      return "chip-conf-" + _confidenceBucket(c);
+    },
+    confidenceLabel(c) {
+      return _confidenceBucket(c);
     },
 
     relativeTime(iso) {

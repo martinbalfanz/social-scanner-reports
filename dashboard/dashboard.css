@@ -153,6 +153,17 @@ button.chip { cursor: pointer; }
 .chip-os-macos,
 .chip-os-linux,
 .chip-os-windows  { background: #e0e6f0; color: #2d3e62; border-color: #c8d0e0; }
+/* Confidence: high = green, medium = neutral, low = warm. */
+.chip-conf-high        { background: #d4ecd6; color: #1f5128; border-color: #b8d8bc; }
+.chip-conf-medium      { background: #ececec; color: #505050; border-color: #d4d4d4; }
+.chip-conf-low         { background: #f6e1d6; color: #743012; border-color: #e6c2a8; }
+.chip-conf-unspecified { background: #f0f0f0; color: #707070; border-color: #dcdcdc; }
+/* Verbatim quote from the post backing the verdict. */
+.item-evidence {
+  font-size: 13px;
+  font-style: italic;
+  margin-top: 2px;
+}
 .reset {
   display: inline-block;
   margin-top: 6px;
