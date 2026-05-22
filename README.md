@@ -2,26 +2,26 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-22T19:24:19.631280+00:00 · Last scan: 2026-05-22T12:05:00.625668+00:00_
+_Generated: 2026-05-22T21:11:36.800237+00:00 · Last scan: 2026-05-22T19:25:08.459430+00:00_
 
 ## Headlines
 
 | | Count |
 |---|---:|
-| Posts pulled across all sources | 12,612 |
-| Posts classified relevant | **1264** |
-| ↳ Webcompat with a domain | 462 |
-| ↳ Webcompat without a clear domain | 24 |
-| ↳ Firefox platform issues | 778 |
+| Posts pulled across all sources | 12,915 |
+| Posts classified relevant | **1745** |
+| ↳ Webcompat with a domain | 614 |
+| ↳ Webcompat without a clear domain | 32 |
+| ↳ Firefox platform issues | 1099 |
 
 ### Bugs on file vs potentially new
 
 | Bucket | Items | With likely match | Potentially new |
 |---|---:|---:|---:|
-| Webcompat (with domain) | 462 | 90 | **372** |
-| Firefox platform | 778 | 46 | **732** |
+| Webcompat (with domain) | 614 | 96 | **518** |
+| Firefox platform | 1099 | 67 | **1032** |
 
-**1128 actionable items** (no clear matching bug filed): 372 webcompat-with-domain, 24 webcompat-no-domain, 732 platform.
+**1582 actionable items** (no clear matching bug filed): 518 webcompat-with-domain, 32 webcompat-no-domain, 1032 platform.
 
 ## Charts
 
@@ -31,16 +31,16 @@ _Generated: 2026-05-22T19:24:19.631280+00:00 · Last scan: 2026-05-22T12:05:00.6
 xychart-beta
     title "Relevant items per day"
     x-axis ["05-09", "05-10", "05-11", "05-12", "05-13", "05-14", "05-15", "05-16", "05-17", "05-18", "05-19", "05-20", "05-21", "05-22"]
-    y-axis "Items" 0 --> 110
-    bar [7, 18, 109, 84, 77, 68, 57, 42, 49, 93, 108, 20, 0, 0]
+    y-axis "Items" 0 --> 280
+    bar [7, 18, 109, 84, 77, 68, 57, 42, 49, 93, 111, 141, 279, 78]
 ```
 
 ### Bugs on file vs potentially new
 
 ```mermaid
 pie showData title Likely on file vs potentially new
-    "Likely on file" : 136
-    "Potentially new" : 1104
+    "Likely on file" : 163
+    "Potentially new" : 1550
 ```
 
 ### Relevant items by source
@@ -48,9 +48,9 @@ pie showData title Likely on file vs potentially new
 ```mermaid
 xychart-beta
     title "Relevant items per source"
-    x-axis ["reddit_comments", "reddit", "sumo", "bluesky", "github", "mastodon", "mozfr", "hackernews"]
-    y-axis "Items" 0 --> 465
-    bar [464, 338, 327, 82, 38, 12, 2, 1]
+    x-axis ["reddit_comments", "sumo", "reddit", "bluesky", "github", "mastodon", "mozfr", "hackernews"]
+    y-axis "Items" 0 --> 781
+    bar [780, 440, 385, 84, 39, 12, 4, 1]
 ```
 
 ### Top domains by report volume
@@ -58,24 +58,31 @@ xychart-beta
 ```mermaid
 xychart-beta
     title "Posts per domain"
-    x-axis ["youtube", "google", "facebook", "reddit", "bsky", "twitch", "web.whatsapp", "id", "gmail", "whatsapp"]
-    y-axis "Posts" 0 --> 111
-    bar [110, 40, 31, 30, 14, 13, 8, 7, 7, 5]
+    x-axis ["google", "youtube", "facebook", "reddit", "twitch", "bsky", "web.whatsapp", "twitter", "netflix", "id"]
+    y-axis "Posts" 0 --> 133
+    bar [132, 123, 34, 31, 15, 14, 9, 7, 7, 7]
 ```
 
 ## Trends (week over week)
 
-**369** relevant items this week vs **419** last week (-50, down).
+**850** relevant items this week vs **419** last week (+431, up).
 
 **Escalating domains** (≥2 more reports this week):
-- `youtube.com`: 32 → 40 (+8)
-- `google.com`: 10 → 15 (+5)
-- `twitch.tv`: 3 → 6 (+3)
+- `google.com`: 10 → 107 (+97)
+- `youtube.com`: 32 → 53 (+21)
+- `twitch.tv`: 3 → 8 (+5)
+- `twitter.com`: 1 → 6 (+5)
+- `amazon.com`: 1 → 3 (+2)
+- `docs.google.com`: 1 → 3 (+2)
+- `netflix.com`: 2 → 4 (+2)
+- `web.whatsapp.com`: 3 → 5 (+2)
 
 **New domains** (no reports last week, ≥2 this week):
 - `id.me`: 7 reports
+- `maps.google.com`: 3 reports
 - `protonmail.com`: 3 reports
 - `chatgpt.com`: 2 reports
+- `homedepot.com`: 2 reports
 - `newgrounds.com`: 2 reports
 
 ## Top clusters
@@ -84,36 +91,36 @@ Domains by report volume across the entire dataset:
 
 | Domain | Posts | Likely match on file | Potentially new |
 |---|---:|---:|---:|
-| `youtube.com` | 110 | 21 | **89** |
-| `google.com` | 40 | 23 | **17** |
-| `facebook.com` | 31 | 0 | **31** |
-| `reddit.com` | 30 | 3 | **27** |
+| `google.com` | 132 | 26 | **106** |
+| `youtube.com` | 123 | 21 | **102** |
+| `facebook.com` | 34 | 0 | **34** |
+| `reddit.com` | 31 | 3 | **28** |
+| `twitch.tv` | 15 | 7 | **8** |
 | `bsky.app` | 14 | 6 | **8** |
-| `twitch.tv` | 13 | 7 | **6** |
-| `web.whatsapp.com` | 8 | 2 | **6** |
+| `web.whatsapp.com` | 9 | 2 | **7** |
+| `twitter.com` | 7 | 0 | **7** |
+| `netflix.com` | 7 | 4 | **3** |
 | `id.me` | 7 | 0 | **7** |
-| `gmail.com` | 7 | 0 | **7** |
-| `whatsapp.com` | 5 | 0 | **5** |
 
 ## High-urgency items with no matching bug
 
 Top webcompat reports by urgency where the matcher found no likely match in Bugzilla or webcompat/web-bugs. These are the candidates for a new filing:
 
+- **`youtube.com`** · urgency 95 · reddit_comments
+  YouTube breaks after Firefox reboot until user profile is replaced; issue started with latest FF update, doesn't occur i
+  · [post](https://reddit.com/r/firefox/comments/1th369d/youtube_again/omtxxhk/)
+- **`google.com`** · urgency 85 · reddit_comments
+  Google Search shows CAPTCHA in Firefox but not in Chrome, blocking search access.
+  · [post](https://reddit.com/r/firefox/comments/1tjgmli/google_search_tries_to_force_google_chrome_on_you/on2b8lb/)
+- **`facebook.com`** · urgency 85 · sumo
+  Facebook reCAPTCHA login broken in Firefox 151.0, works in 150.0.3
+  · [post](https://support.mozilla.org/en-US/questions/1582718)
 - **`jquery.com`** · urgency 85 · github
   jQuery animation promise gets stuck in infinite loop when `.then()` handler added in start callback, freezing browser
   · [post](https://github.com/jquery/jquery/issues/5534)
 - **`amazon.com`** · urgency 85 · sumo
   Firefox freezes during Amazon login and security authentication, causing payment failures; works in Safari.
   · [post](https://support.mozilla.org/en-US/questions/1580185)
-- **`paypal.com`** · urgency 85 · sumo
-  PayPal page fails to load in Firefox desktop but works in Chrome and other browsers.
-  · [post](https://support.mozilla.org/en-US/questions/1580318)
-- **`att.com`** · urgency 85 · reddit
-  AT&T email login page stuck/hanging only in Firefox, works in Chrome/Brave/Safari/Edge.
-  · [post](https://reddit.com/r/firefox/comments/1t218fe/mozilla_user_for_20_years_ff_is_now_the_only/)
-- **`youtube.com`** · urgency 85 · reddit
-  YouTube videos stop playing after exactly one minute with grey screen in Firefox 150.0.3, solved temporarily by profile 
-  · [post](https://reddit.com/r/firefox/comments/1th369d/youtube_again/)
 
 ## High-urgency Firefox platform issues
 
@@ -125,10 +132,10 @@ Top platform-level reports by urgency. These don't tie to a single domain:
   · [post](https://reddit.com/r/firefox/comments/1thtq98/just_lost_my_whole_profile_and_years_of_bookmark/omqbi07/)
 - urgency 95 · Firefox update caused loss of entire profile and bookmarks.
   · [post](https://reddit.com/r/firefox/comments/1thtq98/just_lost_my_whole_profile_and_years_of_bookmark/omq5me5/)
-- urgency 92 · Firefox 150.0.3 causes severe CPU/RAM spike and system BSODs when used with YouTube.
-  · [post](https://reddit.com/r/firefox/comments/1tb4vye/firefox_15003_is_out_release_notes_security/olgleo1/)
-- urgency 92 · Firefox lost all saved passwords after an automatic update, leaving only corrupt logins.json files
-  · [post](https://support.mozilla.org/en-US/questions/1582535)
+- urgency 95 · User lost entire profile and years of bookmarks after Firefox update
+  · [post](https://reddit.com/r/firefox/comments/1thtq98/just_lost_my_whole_profile_and_years_of_bookmark/omxynl2/)
+- urgency 95 · Firefox Mobile deleting downloaded files without user knowledge after update
+  · [post](https://reddit.com/r/firefox/comments/1tj7qnk/warning_firefox_mobile_is_deleting_downloaded/omzuu8j/)
 
 ## Platform issues already on file
 
@@ -137,21 +144,21 @@ Platform reports the matcher confirmed against existing bugs:
 - **Firefox 140.9.1esr and later show some PDFs as blank white pages while other browsers and ** → [BMO#1671854](https://bugzilla.mozilla.org/show_bug.cgi?id=1671854)  _pdf-viewer renders certain files incorrectly_
 - **Bookmarks imported from Chrome are not visible in Firefox 150.0.1 after import.** → [BMO#2037345](https://bugzilla.mozilla.org/show_bug.cgi?id=2037345)  _Imported Bookmarks from Chrome, but nowhere it is visible in Firefox Browser_
 - **All bookmarks disappeared after Firefox update.** → [BMO#2017721](https://bugzilla.mozilla.org/show_bug.cgi?id=2017721)  _all my bookmarks thumbnails disappeared (BIG POOF!)_
-- **Firefox won't load any pages while other browsers work, appearing offline.** → [BMO#1802960](https://bugzilla.mozilla.org/show_bug.cgi?id=1802960)  _YouTube history and other pages intermittently fails to fully load_
-- **Firefox freezes for several minutes after creating a new tab** → [BMO#330135](https://bugzilla.mozilla.org/show_bug.cgi?id=330135)  _CPU 100% with random freezes (several seconds to over 7 minutes) when loading pa_
+- **Firefox Mobile automatically deleted downloaded files after update due to auto-enabled set** → [BMO#1832721](https://bugzilla.mozilla.org/show_bug.cgi?id=1832721)  _Downloaded file automatically deleted when i unstall Firefox_
+- **Firefox Mobile deletes downloaded files without user consent after update.** → [BMO#947536](https://bugzilla.mozilla.org/show_bug.cgi?id=947536)  _When Firefox restarts after crash, it deletes active downloaded files, and start_
 
 ## Latest reports
 
-- [2026-05-20](2026/2026-05/2026-05-20.md) — 20 items
-- [2026-05-19](2026/2026-05/2026-05-19.md) — 108 items
+- [2026-05-22](2026/2026-05/2026-05-22.md) — 78 items
+- [2026-05-21](2026/2026-05/2026-05-21.md) — 279 items
+- [2026-05-20](2026/2026-05/2026-05-20.md) — 141 items
+- [2026-05-19](2026/2026-05/2026-05-19.md) — 111 items
 - [2026-05-18](2026/2026-05/2026-05-18.md) — 93 items
 - [2026-05-17](2026/2026-05/2026-05-17.md) — 49 items
 - [2026-05-16](2026/2026-05/2026-05-16.md) — 42 items
 - [2026-05-15](2026/2026-05/2026-05-15.md) — 57 items
 - [2026-05-14](2026/2026-05/2026-05-14.md) — 68 items
 - [2026-05-13](2026/2026-05/2026-05-13.md) — 77 items
-- [2026-05-12](2026/2026-05/2026-05-12.md) — 84 items
-- [2026-05-11](2026/2026-05/2026-05-11.md) — 109 items
 
 ## Browse
 
