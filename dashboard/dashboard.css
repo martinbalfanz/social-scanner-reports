@@ -212,6 +212,10 @@ button.chip { cursor: pointer; }
   border: 1px solid var(--border);
   border-left: 3px solid var(--border);
   border-radius: 3px;
+  /* Allow the flex child to shrink below its intrinsic min-content width,
+     and let long unbreakable tokens (URLs, hashes, chrome://…) wrap. */
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 .item.cat-webcompat { border-left-color: var(--cat-webcompat); }
 .item.cat-platform  { border-left-color: var(--cat-platform); }
@@ -247,6 +251,10 @@ button.chip { cursor: pointer; }
 .item-author { font-size: 10px; }
 .item-time {
   margin-left: auto;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.item-activity {
   font-size: 11px;
   white-space: nowrap;
 }

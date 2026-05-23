@@ -42,7 +42,7 @@ function dashboard() {
       triage: new Set(["new", "triaged"]),
       match: "all",
     },
-    sort: "recent_activity",
+    sort: "newest",
     expanded: new Set(),
 
     init() {
@@ -85,7 +85,7 @@ function dashboard() {
         triage: new Set(["new", "triaged"]),
         match: "all",
       };
-      this.sort = "recent_activity";
+      this.sort = "newest";
     },
 
     // -- URL hash sync --
@@ -114,7 +114,7 @@ function dashboard() {
         parts.push("triage=" + [...this.filters.triage].sort().join(","));
       }
       if (this.filters.match !== "all") parts.push("match=" + this.filters.match);
-      if (this.sort !== "recent_activity") parts.push("sort=" + this.sort);
+      if (this.sort !== "newest") parts.push("sort=" + this.sort);
       const next = parts.length ? "#" + parts.join("&") : "";
       if (next !== location.hash) {
         history.replaceState(null, "", next || location.pathname);
@@ -264,7 +264,7 @@ function dashboard() {
         urgency: (a, b) => (b.urgency || 0) - (a.urgency || 0),
         domain:  (a, b) => (a.domain || "~platform").localeCompare(b.domain || "~platform"),
       };
-      items.sort(cmp[this.sort] || cmp.recent_activity);
+      items.sort(cmp[this.sort] || cmp.newest);
       return items;
     },
     _dateCutoff() {
