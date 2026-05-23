@@ -2,7 +2,7 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-22T23:40:36.603126+00:00 · Last scan: 2026-05-22T23:05:05.375947+00:00_
+_Generated: 2026-05-23T00:40:34.096257+00:00 · Last scan: 2026-05-23T00:05:02.856007+00:00_
 
 ## Headlines
 
@@ -30,9 +30,9 @@ _Generated: 2026-05-22T23:40:36.603126+00:00 · Last scan: 2026-05-22T23:05:05.3
 ```mermaid
 xychart-beta
     title "Relevant items per day"
-    x-axis ["05-09", "05-10", "05-11", "05-12", "05-13", "05-14", "05-15", "05-16", "05-17", "05-18", "05-19", "05-20", "05-21", "05-22"]
+    x-axis ["05-10", "05-11", "05-12", "05-13", "05-14", "05-15", "05-16", "05-17", "05-18", "05-19", "05-20", "05-21", "05-22", "05-23"]
     y-axis "Items" 0 --> 280
-    bar [7, 18, 109, 84, 77, 68, 57, 42, 49, 93, 111, 141, 279, 99]
+    bar [18, 109, 84, 77, 68, 57, 42, 49, 93, 111, 141, 279, 99, 0]
 ```
 
 ### Bugs on file vs potentially new
@@ -65,25 +65,26 @@ xychart-beta
 
 ## Trends (week over week)
 
-**871** relevant items this week vs **419** last week (+452, up).
+**814** relevant items this week vs **420** last week (+394, up).
 
 **Escalating domains** (≥2 more reports this week):
-- `google.com`: 10 → 107 (+97)
-- `youtube.com`: 32 → 53 (+21)
-- `amazon.com`: 1 → 6 (+5)
-- `twitch.tv`: 3 → 8 (+5)
-- `twitter.com`: 1 → 6 (+5)
+- `google.com`: 11 → 106 (+95)
+- `youtube.com`: 34 → 47 (+13)
+- `twitch.tv`: 2 → 8 (+6)
+- `id.me`: 1 → 6 (+5)
+- `amazon.com`: 2 → 5 (+3)
+- `web.whatsapp.com`: 2 → 5 (+3)
 - `docs.google.com`: 1 → 3 (+2)
 - `netflix.com`: 2 → 4 (+2)
-- `web.whatsapp.com`: 3 → 5 (+2)
 
 **New domains** (no reports last week, ≥2 this week):
-- `id.me`: 7 reports
+- `twitter.com`: 6 reports
 - `maps.google.com`: 3 reports
 - `protonmail.com`: 3 reports
 - `chatgpt.com`: 2 reports
+- `discord.com`: 2 reports
 - `homedepot.com`: 2 reports
-- `newgrounds.com`: 2 reports
+- `meet.google.com`: 2 reports
 - `qwant.com`: 2 reports
 
 ## Top clusters
