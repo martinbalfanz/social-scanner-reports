@@ -2,7 +2,7 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-23T22:07:03.063733+00:00 · Last scan: 2026-05-23T22:05:02.562428+00:00_
+_Generated: 2026-05-24T00:21:55.330269+00:00 · Last scan: 2026-05-23T23:05:01.589014+00:00_
 
 ## Headlines
 
@@ -30,9 +30,9 @@ _Generated: 2026-05-23T22:07:03.063733+00:00 · Last scan: 2026-05-23T22:05:02.5
 ```mermaid
 xychart-beta
     title "Relevant items per day"
-    x-axis ["05-10", "05-11", "05-12", "05-13", "05-14", "05-15", "05-16", "05-17", "05-18", "05-19", "05-20", "05-21", "05-22", "05-23"]
+    x-axis ["05-11", "05-12", "05-13", "05-14", "05-15", "05-16", "05-17", "05-18", "05-19", "05-20", "05-21", "05-22", "05-23", "05-24"]
     y-axis "Items" 0 --> 280
-    bar [18, 109, 84, 77, 68, 57, 42, 49, 93, 111, 141, 279, 113, 106]
+    bar [109, 84, 77, 68, 57, 42, 49, 93, 111, 141, 279, 113, 106, 0]
 ```
 
 ### Bugs on file vs potentially new
@@ -65,16 +65,15 @@ xychart-beta
 
 ## Trends (week over week)
 
-**934** relevant items this week vs **420** last week (+514, up).
+**892** relevant items this week vs **455** last week (+437, up).
 
 **Escalating domains** (≥2 more reports this week):
-- `google.com`: 11 → 108 (+97)
-- `youtube.com`: 34 → 56 (+22)
+- `google.com`: 14 → 105 (+91)
+- `youtube.com`: 40 → 49 (+9)
 - `twitch.tv`: 2 → 9 (+7)
 - `amazon.com`: 2 → 7 (+5)
 - `id.me`: 1 → 6 (+5)
 - `netflix.com`: 2 → 5 (+3)
-- `web.whatsapp.com`: 2 → 5 (+3)
 - `docs.google.com`: 1 → 3 (+2)
 
 **New domains** (no reports last week, ≥2 this week):
@@ -82,7 +81,6 @@ xychart-beta
 - `maps.google.com`: 3 reports
 - `protonmail.com`: 3 reports
 - `chatgpt.com`: 2 reports
-- `discord.com`: 2 reports
 - `homedepot.com`: 2 reports
 - `meet.google.com`: 2 reports
 - `qwant.com`: 2 reports
