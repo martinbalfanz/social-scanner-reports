@@ -2,26 +2,26 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-24T00:21:55.330269+00:00 · Last scan: 2026-05-23T23:05:01.589014+00:00_
+_Generated: 2026-05-24T08:34:16.697075+00:00 · Last scan: 2026-05-24T06:15:50.834943+00:00_
 
 ## Headlines
 
 | | Count |
 |---|---:|
-| Posts pulled across all sources | 13,925 |
-| Posts classified relevant | **1886** |
-| ↳ Webcompat with a domain | 650 |
+| Posts pulled across all sources | 14,127 |
+| Posts classified relevant | **1911** |
+| ↳ Webcompat with a domain | 660 |
 | ↳ Webcompat without a clear domain | 35 |
-| ↳ Firefox platform issues | 1201 |
+| ↳ Firefox platform issues | 1216 |
 
 ### Bugs on file vs potentially new
 
 | Bucket | Items | With likely match | Potentially new |
 |---|---:|---:|---:|
-| Webcompat (with domain) | 650 | 103 | **547** |
-| Firefox platform | 1201 | 72 | **1129** |
+| Webcompat (with domain) | 660 | 103 | **557** |
+| Firefox platform | 1216 | 72 | **1144** |
 
-**1711 actionable items** (no clear matching bug filed): 547 webcompat-with-domain, 35 webcompat-no-domain, 1129 platform.
+**1736 actionable items** (no clear matching bug filed): 557 webcompat-with-domain, 35 webcompat-no-domain, 1144 platform.
 
 ## Charts
 
@@ -32,7 +32,7 @@ xychart-beta
     title "Relevant items per day"
     x-axis ["05-11", "05-12", "05-13", "05-14", "05-15", "05-16", "05-17", "05-18", "05-19", "05-20", "05-21", "05-22", "05-23", "05-24"]
     y-axis "Items" 0 --> 280
-    bar [109, 84, 77, 68, 57, 42, 49, 93, 111, 141, 279, 113, 106, 0]
+    bar [109, 84, 77, 68, 57, 42, 49, 93, 111, 141, 279, 113, 111, 20]
 ```
 
 ### Bugs on file vs potentially new
@@ -40,7 +40,7 @@ xychart-beta
 ```mermaid
 pie showData title Likely on file vs potentially new
     "Likely on file" : 175
-    "Potentially new" : 1676
+    "Potentially new" : 1701
 ```
 
 ### Relevant items by source
@@ -49,8 +49,8 @@ pie showData title Likely on file vs potentially new
 xychart-beta
     title "Relevant items per source"
     x-axis ["reddit_comments", "sumo", "reddit", "bluesky", "github", "mastodon", "mozfr", "hackernews"]
-    y-axis "Items" 0 --> 853
-    bar [852, 481, 409, 85, 39, 12, 7, 1]
+    y-axis "Items" 0 --> 866
+    bar [865, 490, 411, 86, 39, 12, 7, 1]
 ```
 
 ### Top domains by report volume
@@ -58,22 +58,22 @@ xychart-beta
 ```mermaid
 xychart-beta
     title "Posts per domain"
-    x-axis ["google", "youtube", "facebook", "reddit", "twitch", "bsky", "amazon", "web.whatsapp", "twitter", "netflix"]
-    y-axis "Posts" 0 --> 135
-    bar [134, 132, 35, 33, 16, 14, 10, 9, 8, 8]
+    x-axis ["youtube", "google", "facebook", "reddit", "twitch", "bsky", "amazon", "web.whatsapp", "netflix", "twitter"]
+    y-axis "Posts" 0 --> 139
+    bar [138, 134, 35, 33, 16, 14, 10, 9, 9, 8]
 ```
 
 ## Trends (week over week)
 
-**892** relevant items this week vs **455** last week (+437, up).
+**917** relevant items this week vs **455** last week (+462, up).
 
 **Escalating domains** (≥2 more reports this week):
 - `google.com`: 14 → 105 (+91)
-- `youtube.com`: 40 → 49 (+9)
+- `youtube.com`: 40 → 55 (+15)
 - `twitch.tv`: 2 → 9 (+7)
 - `amazon.com`: 2 → 7 (+5)
 - `id.me`: 1 → 6 (+5)
-- `netflix.com`: 2 → 5 (+3)
+- `netflix.com`: 2 → 6 (+4)
 - `docs.google.com`: 1 → 3 (+2)
 
 **New domains** (no reports last week, ≥2 this week):
@@ -91,16 +91,16 @@ Domains by report volume across the entire dataset:
 
 | Domain | Posts | Likely match on file | Potentially new |
 |---|---:|---:|---:|
+| `youtube.com` | 138 | 21 | **117** |
 | `google.com` | 134 | 26 | **108** |
-| `youtube.com` | 132 | 21 | **111** |
 | `facebook.com` | 35 | 0 | **35** |
 | `reddit.com` | 33 | 3 | **30** |
 | `twitch.tv` | 16 | 7 | **9** |
 | `bsky.app` | 14 | 6 | **8** |
 | `amazon.com` | 10 | 4 | **6** |
 | `web.whatsapp.com` | 9 | 2 | **7** |
+| `netflix.com` | 9 | 5 | **4** |
 | `twitter.com` | 8 | 0 | **8** |
-| `netflix.com` | 8 | 5 | **3** |
 
 ## High-urgency items with no matching bug
 
@@ -109,6 +109,9 @@ Top webcompat reports by urgency where the matcher found no likely match in Bugz
 - **`youtube.com`** · urgency 95 · reddit_comments
   YouTube breaks after Firefox reboot until user profile is replaced; issue started with latest FF update, doesn't occur i
   · [post](https://reddit.com/r/firefox/comments/1th369d/youtube_again/omtxxhk/)
+- **`netflix.com`** · urgency 85 · sumo
+  Netflix video displays as full green screen after Firefox update
+  · [post](https://support.mozilla.org/en-US/questions/1583466)
 - **`youtube.com`** · urgency 85 · reddit_comments
   YouTube tab crashes after ~2 seconds in Firefox Nightly.
   · [post](https://reddit.com/r/firefox/comments/1tlrfrv/youtube_tab_crashes_after_2_seconds_with_nightly/onhrm1k/)
@@ -118,9 +121,6 @@ Top webcompat reports by urgency where the matcher found no likely match in Bugz
 - **`google.com`** · urgency 85 · reddit_comments
   Google Search shows CAPTCHA in Firefox but not in Chrome, blocking search access.
   · [post](https://reddit.com/r/firefox/comments/1tjgmli/google_search_tries_to_force_google_chrome_on_you/on2b8lb/)
-- **`facebook.com`** · urgency 85 · sumo
-  Facebook reCAPTCHA login broken in Firefox 151.0, works in 150.0.3
-  · [post](https://support.mozilla.org/en-US/questions/1582718)
 
 ## High-urgency Firefox platform issues
 
@@ -149,7 +149,8 @@ Platform reports the matcher confirmed against existing bugs:
 
 ## Latest reports
 
-- [2026-05-23](2026/2026-05/2026-05-23.md) — 106 items
+- [2026-05-24](2026/2026-05/2026-05-24.md) — 20 items
+- [2026-05-23](2026/2026-05/2026-05-23.md) — 111 items
 - [2026-05-22](2026/2026-05/2026-05-22.md) — 113 items
 - [2026-05-21](2026/2026-05/2026-05-21.md) — 279 items
 - [2026-05-20](2026/2026-05/2026-05-20.md) — 141 items
@@ -158,7 +159,6 @@ Platform reports the matcher confirmed against existing bugs:
 - [2026-05-17](2026/2026-05/2026-05-17.md) — 49 items
 - [2026-05-16](2026/2026-05/2026-05-16.md) — 42 items
 - [2026-05-15](2026/2026-05/2026-05-15.md) — 57 items
-- [2026-05-14](2026/2026-05/2026-05-14.md) — 68 items
 
 ## Browse
 
