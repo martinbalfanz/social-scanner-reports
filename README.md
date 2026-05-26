@@ -2,26 +2,26 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-26T11:07:53.276149+00:00 · Last scan: 2026-05-26T11:06:00.939956+00:00_
+_Generated: 2026-05-26T12:06:49.070616+00:00 · Last scan: 2026-05-26T12:05:03.028178+00:00_
 
 ## Headlines
 
 | | Count |
 |---|---:|
-| Posts pulled across all sources | 15,725 |
-| Posts classified relevant | **2063** |
-| ↳ Webcompat with a domain | 703 |
+| Posts pulled across all sources | 15,748 |
+| Posts classified relevant | **2067** |
+| ↳ Webcompat with a domain | 706 |
 | ↳ Webcompat without a clear domain | 36 |
-| ↳ Firefox platform issues | 1324 |
+| ↳ Firefox platform issues | 1325 |
 
 ### Bugs on file vs potentially new
 
 | Bucket | Items | With likely match | Potentially new |
 |---|---:|---:|---:|
-| Webcompat (with domain) | 703 | 106 | **597** |
-| Firefox platform | 1324 | 75 | **1249** |
+| Webcompat (with domain) | 706 | 106 | **600** |
+| Firefox platform | 1325 | 75 | **1250** |
 
-**1882 actionable items** (no clear matching bug filed): 597 webcompat-with-domain, 36 webcompat-no-domain, 1249 platform.
+**1886 actionable items** (no clear matching bug filed): 600 webcompat-with-domain, 36 webcompat-no-domain, 1250 platform.
 
 ## Charts
 
@@ -32,7 +32,7 @@ xychart-beta
     title "Relevant items per day"
     x-axis ["05-13", "05-14", "05-15", "05-16", "05-17", "05-18", "05-19", "05-20", "05-21", "05-22", "05-23", "05-24", "05-25", "05-26"]
     y-axis "Items" 0 --> 280
-    bar [77, 68, 57, 42, 49, 93, 111, 141, 279, 113, 111, 78, 57, 37]
+    bar [77, 68, 57, 42, 49, 93, 111, 141, 279, 113, 111, 78, 57, 41]
 ```
 
 ### Bugs on file vs potentially new
@@ -40,7 +40,7 @@ xychart-beta
 ```mermaid
 pie showData title Likely on file vs potentially new
     "Likely on file" : 181
-    "Potentially new" : 1846
+    "Potentially new" : 1850
 ```
 
 ### Relevant items by source
@@ -50,7 +50,7 @@ xychart-beta
     title "Relevant items per source"
     x-axis ["reddit_comments", "sumo", "reddit", "bluesky", "github", "mastodon", "mozfr", "hackernews"]
     y-axis "Items" 0 --> 948
-    bar [947, 536, 430, 88, 40, 12, 9, 1]
+    bar [947, 539, 430, 88, 40, 12, 10, 1]
 ```
 
 ### Top domains by report volume
@@ -59,13 +59,13 @@ xychart-beta
 xychart-beta
     title "Posts per domain"
     x-axis ["youtube", "google", "facebook", "reddit", "twitch", "bsky", "amazon", "netflix", "web.whatsapp", "gmail"]
-    y-axis "Posts" 0 --> 151
-    bar [150, 137, 36, 35, 16, 16, 14, 11, 10, 9]
+    y-axis "Posts" 0 --> 152
+    bar [151, 137, 36, 35, 16, 16, 14, 11, 10, 9]
 ```
 
 ## Trends (week over week)
 
-**927** relevant items this week vs **470** last week (+457, up).
+**931** relevant items this week vs **470** last week (+461, up).
 
 **Escalating domains** (≥2 more reports this week):
 - `google.com`: 15 → 102 (+87)
@@ -88,7 +88,7 @@ Domains by report volume across the entire dataset:
 
 | Domain | Posts | Likely match on file | Potentially new |
 |---|---:|---:|---:|
-| `youtube.com` | 150 | 21 | **129** |
+| `youtube.com` | 151 | 21 | **130** |
 | `google.com` | 137 | 27 | **110** |
 | `facebook.com` | 36 | 0 | **36** |
 | `reddit.com` | 35 | 3 | **32** |
@@ -106,6 +106,9 @@ Top webcompat reports by urgency where the matcher found no likely match in Bugz
 - **`youtube.com`** · urgency 95 · reddit_comments
   YouTube breaks after Firefox reboot until user profile is replaced; issue started with latest FF update, doesn't occur i
   · [post](https://reddit.com/r/firefox/comments/1th369d/youtube_again/omtxxhk/)
+- **`youtube.com`** · urgency 85 · sumo
+  YouTube freezes unresponsively in Firefox, blocking scrolling and interaction.
+  · [post](https://support.mozilla.org/en-US/questions/1583872)
 - **`intesasanpaolo.it`** · urgency 85 · sumo
   Firefox shows "400 Bad Request — Request Header Or Cookie Too Large" error when trying to access Intesa San Paolo home b
   · [post](https://support.mozilla.org/en-US/questions/1583690)
@@ -115,9 +118,6 @@ Top webcompat reports by urgency where the matcher found no likely match in Bugz
 - **`youtube.com`** · urgency 85 · reddit_comments
   YouTube tab crashes after ~2 seconds in Firefox Nightly.
   · [post](https://reddit.com/r/firefox/comments/1tlrfrv/youtube_tab_crashes_after_2_seconds_with_nightly/onhrm1k/)
-- **`ebay.com`** · urgency 85 · sumo
-  eBay listing tool fails in Firefox after update, works in Chrome and on mobile.
-  · [post](https://support.mozilla.org/en-US/questions/1583413)
 
 ## High-urgency Firefox platform issues
 
@@ -146,7 +146,7 @@ Platform reports the matcher confirmed against existing bugs:
 
 ## Latest reports
 
-- [2026-05-26](2026/2026-05/2026-05-26.md) — 37 items
+- [2026-05-26](2026/2026-05/2026-05-26.md) — 41 items
 - [2026-05-25](2026/2026-05/2026-05-25.md) — 57 items
 - [2026-05-24](2026/2026-05/2026-05-24.md) — 78 items
 - [2026-05-23](2026/2026-05/2026-05-23.md) — 111 items
