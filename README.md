@@ -2,26 +2,26 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-26T13:07:02.952603+00:00 · Last scan: 2026-05-26T13:05:04.381475+00:00_
+_Generated: 2026-05-26T14:07:06.615574+00:00 · Last scan: 2026-05-26T14:05:06.782935+00:00_
 
 ## Headlines
 
 | | Count |
 |---|---:|
-| Posts pulled across all sources | 15,776 |
-| Posts classified relevant | **2073** |
-| ↳ Webcompat with a domain | 707 |
-| ↳ Webcompat without a clear domain | 36 |
-| ↳ Firefox platform issues | 1330 |
+| Posts pulled across all sources | 15,805 |
+| Posts classified relevant | **2078** |
+| ↳ Webcompat with a domain | 709 |
+| ↳ Webcompat without a clear domain | 37 |
+| ↳ Firefox platform issues | 1332 |
 
 ### Bugs on file vs potentially new
 
 | Bucket | Items | With likely match | Potentially new |
 |---|---:|---:|---:|
-| Webcompat (with domain) | 707 | 106 | **601** |
-| Firefox platform | 1330 | 75 | **1255** |
+| Webcompat (with domain) | 709 | 106 | **603** |
+| Firefox platform | 1332 | 75 | **1257** |
 
-**1892 actionable items** (no clear matching bug filed): 601 webcompat-with-domain, 36 webcompat-no-domain, 1255 platform.
+**1897 actionable items** (no clear matching bug filed): 603 webcompat-with-domain, 37 webcompat-no-domain, 1257 platform.
 
 ## Charts
 
@@ -32,7 +32,7 @@ xychart-beta
     title "Relevant items per day"
     x-axis ["05-13", "05-14", "05-15", "05-16", "05-17", "05-18", "05-19", "05-20", "05-21", "05-22", "05-23", "05-24", "05-25", "05-26"]
     y-axis "Items" 0 --> 280
-    bar [77, 68, 57, 42, 49, 93, 111, 141, 279, 113, 111, 78, 57, 47]
+    bar [77, 68, 57, 42, 49, 93, 111, 141, 279, 113, 111, 78, 57, 52]
 ```
 
 ### Bugs on file vs potentially new
@@ -40,7 +40,7 @@ xychart-beta
 ```mermaid
 pie showData title Likely on file vs potentially new
     "Likely on file" : 181
-    "Potentially new" : 1856
+    "Potentially new" : 1860
 ```
 
 ### Relevant items by source
@@ -49,8 +49,8 @@ pie showData title Likely on file vs potentially new
 xychart-beta
     title "Relevant items per source"
     x-axis ["reddit_comments", "sumo", "reddit", "bluesky", "github", "mastodon", "mozfr", "hackernews"]
-    y-axis "Items" 0 --> 952
-    bar [951, 540, 431, 88, 40, 12, 10, 1]
+    y-axis "Items" 0 --> 954
+    bar [953, 543, 431, 88, 40, 12, 10, 1]
 ```
 
 ### Top domains by report volume
@@ -60,12 +60,12 @@ xychart-beta
     title "Posts per domain"
     x-axis ["youtube", "google", "facebook", "reddit", "twitch", "bsky", "amazon", "netflix", "web.whatsapp", "gmail"]
     y-axis "Posts" 0 --> 152
-    bar [151, 137, 36, 35, 16, 16, 14, 11, 10, 9]
+    bar [151, 137, 36, 35, 16, 16, 14, 11, 10, 10]
 ```
 
 ## Trends (week over week)
 
-**937** relevant items this week vs **470** last week (+467, up).
+**942** relevant items this week vs **470** last week (+472, up).
 
 **Escalating domains** (≥2 more reports this week):
 - `google.com`: 15 → 102 (+87)
@@ -79,6 +79,7 @@ xychart-beta
 - `maps.google.com`: 3 reports
 - `protonmail.com`: 3 reports
 - `ebay.com`: 2 reports
+- `linkedin.com`: 2 reports
 - `qwant.com`: 2 reports
 - `tiktok.com`: 2 reports
 
@@ -97,7 +98,7 @@ Domains by report volume across the entire dataset:
 | `amazon.com` | 14 | 5 | **9** |
 | `netflix.com` | 11 | 5 | **6** |
 | `web.whatsapp.com` | 10 | 2 | **8** |
-| `gmail.com` | 9 | 0 | **9** |
+| `gmail.com` | 10 | 0 | **10** |
 
 ## High-urgency items with no matching bug
 
@@ -146,7 +147,7 @@ Platform reports the matcher confirmed against existing bugs:
 
 ## Latest reports
 
-- [2026-05-26](2026/2026-05/2026-05-26.md) — 47 items
+- [2026-05-26](2026/2026-05/2026-05-26.md) — 52 items
 - [2026-05-25](2026/2026-05/2026-05-25.md) — 57 items
 - [2026-05-24](2026/2026-05/2026-05-24.md) — 78 items
 - [2026-05-23](2026/2026-05/2026-05-23.md) — 111 items
