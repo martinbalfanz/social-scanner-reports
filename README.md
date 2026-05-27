@@ -2,26 +2,26 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-27T09:06:47.490393+00:00 · Last scan: 2026-05-27T09:05:05.965244+00:00_
+_Generated: 2026-05-27T10:07:04.347748+00:00 · Last scan: 2026-05-27T10:05:01.925135+00:00_
 
 ## Headlines
 
 | | Count |
 |---|---:|
-| Posts pulled across all sources | 16,343 |
-| Posts classified relevant | **2166** |
-| ↳ Webcompat with a domain | 740 |
+| Posts pulled across all sources | 16,368 |
+| Posts classified relevant | **2175** |
+| ↳ Webcompat with a domain | 746 |
 | ↳ Webcompat without a clear domain | 38 |
-| ↳ Firefox platform issues | 1388 |
+| ↳ Firefox platform issues | 1391 |
 
 ### Bugs on file vs potentially new
 
 | Bucket | Items | With likely match | Potentially new |
 |---|---:|---:|---:|
-| Webcompat (with domain) | 740 | 106 | **634** |
-| Firefox platform | 1388 | 76 | **1312** |
+| Webcompat (with domain) | 746 | 106 | **640** |
+| Firefox platform | 1391 | 76 | **1315** |
 
-**1984 actionable items** (no clear matching bug filed): 634 webcompat-with-domain, 38 webcompat-no-domain, 1312 platform.
+**1993 actionable items** (no clear matching bug filed): 640 webcompat-with-domain, 38 webcompat-no-domain, 1315 platform.
 
 ## Charts
 
@@ -32,7 +32,7 @@ xychart-beta
     title "Relevant items per day"
     x-axis ["05-14", "05-15", "05-16", "05-17", "05-18", "05-19", "05-20", "05-21", "05-22", "05-23", "05-24", "05-25", "05-26", "05-27"]
     y-axis "Items" 0 --> 280
-    bar [68, 57, 42, 49, 93, 111, 141, 279, 113, 111, 78, 57, 103, 37]
+    bar [68, 57, 42, 49, 93, 111, 141, 279, 113, 111, 78, 57, 103, 46]
 ```
 
 ### Bugs on file vs potentially new
@@ -40,7 +40,7 @@ xychart-beta
 ```mermaid
 pie showData title Likely on file vs potentially new
     "Likely on file" : 182
-    "Potentially new" : 1946
+    "Potentially new" : 1955
 ```
 
 ### Relevant items by source
@@ -49,8 +49,8 @@ pie showData title Likely on file vs potentially new
 xychart-beta
     title "Relevant items per source"
     x-axis ["reddit_comments", "sumo", "reddit", "bluesky", "github", "mastodon", "mozfr", "hackernews"]
-    y-axis "Items" 0 --> 1005
-    bar [1004, 566, 443, 90, 40, 12, 10, 1]
+    y-axis "Items" 0 --> 1013
+    bar [1012, 567, 443, 90, 40, 12, 10, 1]
 ```
 
 ### Top domains by report volume
@@ -59,18 +59,18 @@ xychart-beta
 xychart-beta
     title "Posts per domain"
     x-axis ["youtube", "google", "reddit", "facebook", "bsky", "twitch", "amazon", "netflix", "web.whatsapp", "gmail"]
-    y-axis "Posts" 0 --> 163
-    bar [162, 141, 41, 38, 17, 16, 14, 11, 10, 10]
+    y-axis "Posts" 0 --> 168
+    bar [167, 141, 41, 38, 17, 16, 14, 11, 10, 10]
 ```
 
 ## Trends (week over week)
 
-**919** relevant items this week vs **497** last week (+422, up).
+**928** relevant items this week vs **497** last week (+431, up).
 
 **Escalating domains** (≥2 more reports this week):
 - `google.com`: 19 → 101 (+82)
+- `youtube.com`: 52 → 62 (+10)
 - `amazon.com`: 2 → 11 (+9)
-- `youtube.com`: 52 → 57 (+5)
 - `netflix.com`: 2 → 6 (+4)
 - `bsky.app`: 1 → 3 (+2)
 
@@ -88,7 +88,7 @@ Domains by report volume across the entire dataset:
 
 | Domain | Posts | Likely match on file | Potentially new |
 |---|---:|---:|---:|
-| `youtube.com` | 162 | 21 | **141** |
+| `youtube.com` | 167 | 21 | **146** |
 | `google.com` | 141 | 27 | **114** |
 | `reddit.com` | 41 | 3 | **38** |
 | `facebook.com` | 38 | 0 | **38** |
@@ -146,7 +146,7 @@ Platform reports the matcher confirmed against existing bugs:
 
 ## Latest reports
 
-- [2026-05-27](2026/2026-05/2026-05-27.md) — 37 items
+- [2026-05-27](2026/2026-05/2026-05-27.md) — 46 items
 - [2026-05-26](2026/2026-05/2026-05-26.md) — 103 items
 - [2026-05-25](2026/2026-05/2026-05-25.md) — 57 items
 - [2026-05-24](2026/2026-05/2026-05-24.md) — 78 items
