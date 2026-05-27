@@ -2,7 +2,7 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-27T22:06:56.392239+00:00 · Last scan: 2026-05-27T22:05:02.208846+00:00_
+_Generated: 2026-05-27T23:40:38.287543+00:00 · Last scan: 2026-05-27T23:05:07.115502+00:00_
 
 ## Headlines
 
