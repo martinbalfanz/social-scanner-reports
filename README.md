@@ -2,26 +2,26 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-27T13:06:56.049614+00:00 · Last scan: 2026-05-27T13:05:01.063847+00:00_
+_Generated: 2026-05-27T14:07:29.788996+00:00 · Last scan: 2026-05-27T14:05:03.337537+00:00_
 
 ## Headlines
 
 | | Count |
 |---|---:|
-| Posts pulled across all sources | 16,443 |
-| Posts classified relevant | **2181** |
-| ↳ Webcompat with a domain | 748 |
+| Posts pulled across all sources | 16,469 |
+| Posts classified relevant | **2189** |
+| ↳ Webcompat with a domain | 750 |
 | ↳ Webcompat without a clear domain | 38 |
-| ↳ Firefox platform issues | 1395 |
+| ↳ Firefox platform issues | 1401 |
 
 ### Bugs on file vs potentially new
 
 | Bucket | Items | With likely match | Potentially new |
 |---|---:|---:|---:|
-| Webcompat (with domain) | 748 | 107 | **641** |
-| Firefox platform | 1395 | 76 | **1319** |
+| Webcompat (with domain) | 750 | 107 | **643** |
+| Firefox platform | 1401 | 76 | **1325** |
 
-**1998 actionable items** (no clear matching bug filed): 641 webcompat-with-domain, 38 webcompat-no-domain, 1319 platform.
+**2006 actionable items** (no clear matching bug filed): 643 webcompat-with-domain, 38 webcompat-no-domain, 1325 platform.
 
 ## Charts
 
@@ -32,7 +32,7 @@ xychart-beta
     title "Relevant items per day"
     x-axis ["05-14", "05-15", "05-16", "05-17", "05-18", "05-19", "05-20", "05-21", "05-22", "05-23", "05-24", "05-25", "05-26", "05-27"]
     y-axis "Items" 0 --> 280
-    bar [68, 57, 42, 49, 93, 111, 141, 279, 113, 111, 78, 57, 103, 52]
+    bar [68, 57, 42, 49, 93, 111, 141, 279, 113, 111, 78, 57, 103, 60]
 ```
 
 ### Bugs on file vs potentially new
@@ -40,7 +40,7 @@ xychart-beta
 ```mermaid
 pie showData title Likely on file vs potentially new
     "Likely on file" : 183
-    "Potentially new" : 1960
+    "Potentially new" : 1968
 ```
 
 ### Relevant items by source
@@ -49,8 +49,8 @@ pie showData title Likely on file vs potentially new
 xychart-beta
     title "Relevant items per source"
     x-axis ["reddit_comments", "sumo", "reddit", "bluesky", "github", "mastodon", "mozfr", "hackernews"]
-    y-axis "Items" 0 --> 1017
-    bar [1016, 568, 444, 90, 40, 12, 10, 1]
+    y-axis "Items" 0 --> 1018
+    bar [1017, 571, 448, 90, 40, 12, 10, 1]
 ```
 
 ### Top domains by report volume
@@ -65,7 +65,7 @@ xychart-beta
 
 ## Trends (week over week)
 
-**934** relevant items this week vs **497** last week (+437, up).
+**942** relevant items this week vs **497** last week (+445, up).
 
 **Escalating domains** (≥2 more reports this week):
 - `google.com`: 19 → 103 (+84)
@@ -106,6 +106,9 @@ Top webcompat reports by urgency where the matcher found no likely match in Bugz
 - **`youtube.com`** · urgency 95 · reddit_comments
   YouTube breaks after Firefox reboot until user profile is replaced; issue started with latest FF update, doesn't occur i
   · [post](https://reddit.com/r/firefox/comments/1th369d/youtube_again/omtxxhk/)
+- **`fidelity.com`** · urgency 85 · sumo
+  Fidelity Investments login fails in Firefox with "can't complete at this time" error, works in Chrome.
+  · [post](https://support.mozilla.org/en-US/questions/1584070)
 - **`youtube.com`** · urgency 85 · reddit_comments
   YouTube videos turn grayscale in Firefox after ~1 minute of playback
   · [post](https://reddit.com/r/firefox/comments/1tol7qc/1_minute_and_the_yt_video_grayscreens/oo297e4/)
@@ -115,9 +118,6 @@ Top webcompat reports by urgency where the matcher found no likely match in Bugz
 - **`intesasanpaolo.it`** · urgency 85 · sumo
   Firefox shows "400 Bad Request — Request Header Or Cookie Too Large" error when trying to access Intesa San Paolo home b
   · [post](https://support.mozilla.org/en-US/questions/1583690)
-- **`netflix.com`** · urgency 85 · sumo
-  Netflix video displays as full green screen after Firefox update
-  · [post](https://support.mozilla.org/en-US/questions/1583466)
 
 ## High-urgency Firefox platform issues
 
@@ -146,7 +146,7 @@ Platform reports the matcher confirmed against existing bugs:
 
 ## Latest reports
 
-- [2026-05-27](2026/2026-05/2026-05-27.md) — 52 items
+- [2026-05-27](2026/2026-05/2026-05-27.md) — 60 items
 - [2026-05-26](2026/2026-05/2026-05-26.md) — 103 items
 - [2026-05-25](2026/2026-05/2026-05-25.md) — 57 items
 - [2026-05-24](2026/2026-05/2026-05-24.md) — 78 items
