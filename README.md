@@ -2,26 +2,26 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-27T11:06:51.895662+00:00 · Last scan: 2026-05-27T11:05:06.946698+00:00_
+_Generated: 2026-05-27T12:07:06.304055+00:00 · Last scan: 2026-05-27T12:05:01.971244+00:00_
 
 ## Headlines
 
 | | Count |
 |---|---:|
-| Posts pulled across all sources | 16,387 |
-| Posts classified relevant | **2177** |
-| ↳ Webcompat with a domain | 746 |
+| Posts pulled across all sources | 16,414 |
+| Posts classified relevant | **2179** |
+| ↳ Webcompat with a domain | 747 |
 | ↳ Webcompat without a clear domain | 38 |
-| ↳ Firefox platform issues | 1393 |
+| ↳ Firefox platform issues | 1394 |
 
 ### Bugs on file vs potentially new
 
 | Bucket | Items | With likely match | Potentially new |
 |---|---:|---:|---:|
-| Webcompat (with domain) | 746 | 106 | **640** |
-| Firefox platform | 1393 | 76 | **1317** |
+| Webcompat (with domain) | 747 | 106 | **641** |
+| Firefox platform | 1394 | 76 | **1318** |
 
-**1995 actionable items** (no clear matching bug filed): 640 webcompat-with-domain, 38 webcompat-no-domain, 1317 platform.
+**1997 actionable items** (no clear matching bug filed): 641 webcompat-with-domain, 38 webcompat-no-domain, 1318 platform.
 
 ## Charts
 
@@ -32,7 +32,7 @@ xychart-beta
     title "Relevant items per day"
     x-axis ["05-14", "05-15", "05-16", "05-17", "05-18", "05-19", "05-20", "05-21", "05-22", "05-23", "05-24", "05-25", "05-26", "05-27"]
     y-axis "Items" 0 --> 280
-    bar [68, 57, 42, 49, 93, 111, 141, 279, 113, 111, 78, 57, 103, 48]
+    bar [68, 57, 42, 49, 93, 111, 141, 279, 113, 111, 78, 57, 103, 50]
 ```
 
 ### Bugs on file vs potentially new
@@ -40,7 +40,7 @@ xychart-beta
 ```mermaid
 pie showData title Likely on file vs potentially new
     "Likely on file" : 182
-    "Potentially new" : 1957
+    "Potentially new" : 1959
 ```
 
 ### Relevant items by source
@@ -49,8 +49,8 @@ pie showData title Likely on file vs potentially new
 xychart-beta
     title "Relevant items per source"
     x-axis ["reddit_comments", "sumo", "reddit", "bluesky", "github", "mastodon", "mozfr", "hackernews"]
-    y-axis "Items" 0 --> 1013
-    bar [1012, 568, 444, 90, 40, 12, 10, 1]
+    y-axis "Items" 0 --> 1015
+    bar [1014, 568, 444, 90, 40, 12, 10, 1]
 ```
 
 ### Top domains by report volume
@@ -60,15 +60,15 @@ xychart-beta
     title "Posts per domain"
     x-axis ["youtube", "google", "reddit", "facebook", "bsky", "twitch", "amazon", "netflix", "web.whatsapp", "gmail"]
     y-axis "Posts" 0 --> 168
-    bar [167, 141, 41, 38, 17, 16, 14, 11, 10, 10]
+    bar [167, 142, 41, 38, 17, 16, 14, 11, 10, 10]
 ```
 
 ## Trends (week over week)
 
-**930** relevant items this week vs **497** last week (+433, up).
+**932** relevant items this week vs **497** last week (+435, up).
 
 **Escalating domains** (≥2 more reports this week):
-- `google.com`: 19 → 101 (+82)
+- `google.com`: 19 → 102 (+83)
 - `youtube.com`: 52 → 62 (+10)
 - `amazon.com`: 2 → 11 (+9)
 - `netflix.com`: 2 → 6 (+4)
@@ -89,7 +89,7 @@ Domains by report volume across the entire dataset:
 | Domain | Posts | Likely match on file | Potentially new |
 |---|---:|---:|---:|
 | `youtube.com` | 167 | 21 | **146** |
-| `google.com` | 141 | 27 | **114** |
+| `google.com` | 142 | 27 | **115** |
 | `reddit.com` | 41 | 3 | **38** |
 | `facebook.com` | 38 | 0 | **38** |
 | `bsky.app` | 17 | 6 | **11** |
@@ -146,7 +146,7 @@ Platform reports the matcher confirmed against existing bugs:
 
 ## Latest reports
 
-- [2026-05-27](2026/2026-05/2026-05-27.md) — 48 items
+- [2026-05-27](2026/2026-05/2026-05-27.md) — 50 items
 - [2026-05-26](2026/2026-05/2026-05-26.md) — 103 items
 - [2026-05-25](2026/2026-05/2026-05-25.md) — 57 items
 - [2026-05-24](2026/2026-05/2026-05-24.md) — 78 items
