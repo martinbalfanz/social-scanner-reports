@@ -2,26 +2,26 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-27T15:08:36.194254+00:00 · Last scan: 2026-05-27T15:05:06.141378+00:00_
+_Generated: 2026-05-27T16:07:40.524464+00:00 · Last scan: 2026-05-27T16:05:02.045270+00:00_
 
 ## Headlines
 
 | | Count |
 |---|---:|
-| Posts pulled across all sources | 16,525 |
-| Posts classified relevant | **2195** |
-| ↳ Webcompat with a domain | 751 |
+| Posts pulled across all sources | 16,570 |
+| Posts classified relevant | **2202** |
+| ↳ Webcompat with a domain | 753 |
 | ↳ Webcompat without a clear domain | 38 |
-| ↳ Firefox platform issues | 1406 |
+| ↳ Firefox platform issues | 1411 |
 
 ### Bugs on file vs potentially new
 
 | Bucket | Items | With likely match | Potentially new |
 |---|---:|---:|---:|
-| Webcompat (with domain) | 751 | 107 | **644** |
-| Firefox platform | 1406 | 77 | **1329** |
+| Webcompat (with domain) | 753 | 107 | **646** |
+| Firefox platform | 1411 | 77 | **1334** |
 
-**2011 actionable items** (no clear matching bug filed): 644 webcompat-with-domain, 38 webcompat-no-domain, 1329 platform.
+**2018 actionable items** (no clear matching bug filed): 646 webcompat-with-domain, 38 webcompat-no-domain, 1334 platform.
 
 ## Charts
 
@@ -32,7 +32,7 @@ xychart-beta
     title "Relevant items per day"
     x-axis ["05-14", "05-15", "05-16", "05-17", "05-18", "05-19", "05-20", "05-21", "05-22", "05-23", "05-24", "05-25", "05-26", "05-27"]
     y-axis "Items" 0 --> 280
-    bar [68, 57, 42, 49, 93, 111, 141, 279, 113, 111, 78, 57, 103, 66]
+    bar [68, 57, 42, 49, 93, 111, 141, 279, 113, 111, 78, 57, 103, 73]
 ```
 
 ### Bugs on file vs potentially new
@@ -40,7 +40,7 @@ xychart-beta
 ```mermaid
 pie showData title Likely on file vs potentially new
     "Likely on file" : 184
-    "Potentially new" : 1973
+    "Potentially new" : 1980
 ```
 
 ### Relevant items by source
@@ -49,8 +49,8 @@ pie showData title Likely on file vs potentially new
 xychart-beta
     title "Relevant items per source"
     x-axis ["reddit_comments", "sumo", "reddit", "bluesky", "github", "mastodon", "mozfr", "hackernews"]
-    y-axis "Items" 0 --> 1021
-    bar [1020, 573, 449, 90, 40, 12, 10, 1]
+    y-axis "Items" 0 --> 1025
+    bar [1024, 575, 450, 90, 40, 12, 10, 1]
 ```
 
 ### Top domains by report volume
@@ -59,17 +59,17 @@ xychart-beta
 xychart-beta
     title "Posts per domain"
     x-axis ["youtube", "google", "reddit", "facebook", "bsky", "twitch", "amazon", "netflix", "web.whatsapp", "gmail"]
-    y-axis "Posts" 0 --> 168
-    bar [167, 143, 41, 38, 17, 16, 14, 11, 10, 10]
+    y-axis "Posts" 0 --> 169
+    bar [168, 143, 41, 38, 17, 16, 14, 11, 10, 10]
 ```
 
 ## Trends (week over week)
 
-**948** relevant items this week vs **497** last week (+451, up).
+**955** relevant items this week vs **497** last week (+458, up).
 
 **Escalating domains** (≥2 more reports this week):
 - `google.com`: 19 → 103 (+84)
-- `youtube.com`: 52 → 62 (+10)
+- `youtube.com`: 52 → 63 (+11)
 - `amazon.com`: 2 → 11 (+9)
 - `netflix.com`: 2 → 6 (+4)
 - `bsky.app`: 1 → 3 (+2)
@@ -88,7 +88,7 @@ Domains by report volume across the entire dataset:
 
 | Domain | Posts | Likely match on file | Potentially new |
 |---|---:|---:|---:|
-| `youtube.com` | 167 | 21 | **146** |
+| `youtube.com` | 168 | 21 | **147** |
 | `google.com` | 143 | 28 | **115** |
 | `reddit.com` | 41 | 3 | **38** |
 | `facebook.com` | 38 | 0 | **38** |
@@ -146,7 +146,7 @@ Platform reports the matcher confirmed against existing bugs:
 
 ## Latest reports
 
-- [2026-05-27](2026/2026-05/2026-05-27.md) — 66 items
+- [2026-05-27](2026/2026-05/2026-05-27.md) — 73 items
 - [2026-05-26](2026/2026-05/2026-05-26.md) — 103 items
 - [2026-05-25](2026/2026-05/2026-05-25.md) — 57 items
 - [2026-05-24](2026/2026-05/2026-05-24.md) — 78 items
