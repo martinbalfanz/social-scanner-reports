@@ -2,7 +2,7 @@
 
 Auto-generated WebCompat signal from Reddit (submissions + r/firefox comments), Hacker News, Bluesky, Mastodon, and support.mozilla.org. Posts are classified via Claude Haiku into site-specific webcompat issues and Firefox-platform issues, cross-referenced against Bugzilla and webcompat/web-bugs to surface what's already on file.
 
-_Generated: 2026-05-27T23:40:38.287543+00:00 · Last scan: 2026-05-27T23:05:07.115502+00:00_
+_Generated: 2026-05-28T00:51:51.484702+00:00 · Last scan: 2026-05-28T00:16:17.152867+00:00_
 
 ## Headlines
 
@@ -30,9 +30,9 @@ _Generated: 2026-05-27T23:40:38.287543+00:00 · Last scan: 2026-05-27T23:05:07.1
 ```mermaid
 xychart-beta
     title "Relevant items per day"
-    x-axis ["05-14", "05-15", "05-16", "05-17", "05-18", "05-19", "05-20", "05-21", "05-22", "05-23", "05-24", "05-25", "05-26", "05-27"]
+    x-axis ["05-15", "05-16", "05-17", "05-18", "05-19", "05-20", "05-21", "05-22", "05-23", "05-24", "05-25", "05-26", "05-27", "05-28"]
     y-axis "Items" 0 --> 280
-    bar [68, 57, 42, 49, 93, 111, 141, 279, 113, 111, 78, 57, 103, 98]
+    bar [57, 42, 49, 93, 111, 141, 279, 113, 111, 78, 57, 103, 98, 0]
 ```
 
 ### Bugs on file vs potentially new
@@ -65,23 +65,22 @@ xychart-beta
 
 ## Trends (week over week)
 
-**980** relevant items this week vs **497** last week (+483, up).
+**839** relevant items this week vs **561** last week (+278, up).
 
 **Escalating domains** (≥2 more reports this week):
-- `google.com`: 19 → 104 (+85)
-- `youtube.com`: 52 → 63 (+11)
-- `amazon.com`: 2 → 11 (+9)
+- `google.com`: 21 → 100 (+79)
+- `amazon.com`: 2 → 10 (+8)
 - `netflix.com`: 2 → 6 (+4)
+- `reddit.com`: 9 → 13 (+4)
 - `bsky.app`: 1 → 3 (+2)
-- `reddit.com`: 11 → 13 (+2)
+- `docs.google.com`: 1 → 3 (+2)
+- `gmail.com`: 1 → 3 (+2)
 
 **New domains** (no reports last week, ≥2 this week):
-- `docs.google.com`: 4 reports
 - `ebay.com`: 3 reports
 - `maps.google.com`: 3 reports
 - `aol.com`: 2 reports
 - `linkedin.com`: 2 reports
-- `mail.twc.com`: 2 reports
 - `qwant.com`: 2 reports
 - `tiktok.com`: 2 reports
 
