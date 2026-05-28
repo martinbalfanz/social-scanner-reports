@@ -5,6 +5,12 @@
 const ALL_OS = ["unspecified", "mobile", "ios", "android",
                 "desktop", "macos", "linux", "windows"];
 const ALL_CONFIDENCE = ["high", "medium", "low", "unspecified"];
+const ALL_CATEGORIES = ["webcompat", "accessibility", "performance",
+                         "platform", "other"];
+// `other` is real bugs that are off-scope for WebCompat (Firefox desktop
+// chrome, Mozilla VPN, etc.). Default-hidden; user can toggle on.
+const DEFAULT_CATEGORIES = ["webcompat", "accessibility", "performance",
+                             "platform"];
 const CONFIDENCE_LABELS = {
   high:        "high (70+)",
   medium:      "medium (40–69)",
@@ -30,12 +36,20 @@ const OS_LABELS = {
 
 function dashboard() {
   return {
-    data: { items: [], timeline: { buckets: [], older: { webcompat: 0, platform: 0 } }, sources: [], domains_top: [], generated_at: "" },
+    data: {
+      items: [],
+      timeline: {
+        buckets: [],
+        older: { webcompat: 0, accessibility: 0, performance: 0,
+                 platform: 0, other: 0 },
+      },
+      sources: [], domains_top: [], generated_at: "",
+    },
     filters: {
       sources: new Set(),
       os: new Set(ALL_OS),
       confidence: new Set(["high", "medium"]),
-      category: "all",
+      category: new Set(DEFAULT_CATEGORIES),
       date: "7d",
       domains: new Set(),
       domainSearch: "",
@@ -78,7 +92,7 @@ function dashboard() {
         sources: new Set(this.data.sources.map(s => s.name)),
         os: new Set(ALL_OS),
         confidence: new Set(["high", "medium"]),
-        category: "all",
+        category: new Set(DEFAULT_CATEGORIES),
         date: "7d",
         domains: new Set(),
         domainSearch: "",
@@ -104,7 +118,10 @@ function dashboard() {
       if (!this._setEq(this.filters.confidence, defConf)) {
         parts.push("confidence=" + [...this.filters.confidence].sort().join(","));
       }
-      if (this.filters.category !== "all") parts.push("category=" + this.filters.category);
+      const defCat = new Set(DEFAULT_CATEGORIES);
+      if (!this._setEq(this.filters.category, defCat)) {
+        parts.push("category=" + [...this.filters.category].sort().join(","));
+      }
       if (this.filters.date !== "7d") parts.push("date=" + this.filters.date);
       if (this.filters.domains.size > 0) {
         parts.push("domain=" + [...this.filters.domains].sort().join(","));
@@ -133,7 +150,9 @@ function dashboard() {
       if (params.has("confidence")) {
         this.filters.confidence = new Set(params.get("confidence").split(",").filter(Boolean));
       }
-      if (params.has("category")) this.filters.category = params.get("category");
+      if (params.has("category")) {
+        this.filters.category = new Set(params.get("category").split(",").filter(Boolean));
+      }
       if (params.has("date")) this.filters.date = params.get("date");
       if (params.has("domain")) {
         this.filters.domains = new Set(params.get("domain").split(",").filter(Boolean));
@@ -163,7 +182,7 @@ function dashboard() {
         if (skip !== "confidence") {
           if (!this.filters.confidence.has(_confidenceBucket(it.confidence))) return false;
         }
-        if (skip !== "category" && this.filters.category !== "all" && it.category !== this.filters.category) return false;
+        if (skip !== "category" && !this.filters.category.has(it.category)) return false;
         if (skip !== "domains" && this.filters.domains.size > 0) {
           if (!it.domain || !this.filters.domains.has(it.domain)) return false;
         }
@@ -206,6 +225,18 @@ function dashboard() {
       return ALL_CONFIDENCE.map(name => ({
         name,
         label: CONFIDENCE_LABELS[name],
+        count: counter[name] || 0,
+      }));
+    },
+
+    get displayCategory() {
+      const items = this.itemsWithoutFilter("category");
+      const counter = {};
+      for (const it of items) {
+        if (it.category) counter[it.category] = (counter[it.category] || 0) + 1;
+      }
+      return ALL_CATEGORIES.map(name => ({
+        name,
         count: counter[name] || 0,
       }));
     },
@@ -282,33 +313,47 @@ function dashboard() {
       const buckets = this.data.timeline.buckets;
       const older = this.data.timeline.older;
       if (!buckets || buckets.length === 0) return "";
-      const olderTotal = older.webcompat + older.platform;
+      const CATS = ALL_CATEGORIES;
+      const olderTotal = CATS.reduce((sum, c) => sum + (older[c] || 0), 0);
       const cellCount = buckets.length + (olderTotal > 0 ? 1 : 0);
       const w = 100;
       const h = 70;
       const padBottom = 12;
       const barW = w / cellCount;
       let max = 1;
-      buckets.forEach(b => max = Math.max(max, b.webcompat + b.platform));
+      buckets.forEach(b => {
+        const total = CATS.reduce((s, c) => s + (b[c] || 0), 0);
+        if (total > max) max = total;
+      });
       if (olderTotal > max) max = olderTotal;
       const scale = (h - padBottom) / max;
       const cutoff = this._dateCutoff();
       const inWindow = (dateStr) => !cutoff || new Date(dateStr) >= cutoff;
       const cells = [];
+
+      const stackBar = (counts, x, extraCls, titleStr) => {
+        // Render from bottom (webcompat) up to top (other); for each
+        // category emit one <rect> at the appropriate y/height.
+        let yCursor = h - padBottom;
+        CATS.forEach(cat => {
+          const v = counts[cat] || 0;
+          if (v === 0) return;
+          const segH = v * scale;
+          yCursor -= segH;
+          cells.push(`<rect class="bar-${cat}${extraCls}" x="${x.toFixed(2)}" y="${yCursor.toFixed(2)}" width="${(barW * 0.85).toFixed(2)}" height="${segH.toFixed(2)}"><title>${titleStr}</title></rect>`);
+        });
+      };
+
       let x = 0;
       if (olderTotal > 0) {
-        const wcH = older.webcompat * scale;
-        const pH = older.platform * scale;
-        cells.push(`<rect class="bar-platform bar-outside" x="${x.toFixed(2)}" y="${(h - padBottom - wcH - pH).toFixed(2)}" width="${(barW * 0.85).toFixed(2)}" height="${pH.toFixed(2)}"><title>older · webcompat ${older.webcompat} · platform ${older.platform}</title></rect>`);
-        cells.push(`<rect class="bar-webcompat bar-outside" x="${x.toFixed(2)}" y="${(h - padBottom - wcH).toFixed(2)}" width="${(barW * 0.85).toFixed(2)}" height="${wcH.toFixed(2)}"></rect>`);
+        const title = "older · " + CATS.map(c => `${c} ${older[c] || 0}`).join(" · ");
+        stackBar(older, x, " bar-outside", title);
         x += barW;
       }
       buckets.forEach(b => {
-        const wcH = b.webcompat * scale;
-        const pH = b.platform * scale;
         const cls = inWindow(b.date) ? "" : " bar-outside";
-        cells.push(`<rect class="bar-platform${cls}" x="${x.toFixed(2)}" y="${(h - padBottom - wcH - pH).toFixed(2)}" width="${(barW * 0.85).toFixed(2)}" height="${pH.toFixed(2)}"><title>${b.date} · webcompat ${b.webcompat} · platform ${b.platform}</title></rect>`);
-        cells.push(`<rect class="bar-webcompat${cls}" x="${x.toFixed(2)}" y="${(h - padBottom - wcH).toFixed(2)}" width="${(barW * 0.85).toFixed(2)}" height="${wcH.toFixed(2)}"></rect>`);
+        const title = b.date + " · " + CATS.map(c => `${c} ${b[c] || 0}`).join(" · ");
+        stackBar(b, x, cls, title);
         x += barW;
       });
       return `<svg viewBox="0 0 ${w} ${h - padBottom}" preserveAspectRatio="none">${cells.join("")}</svg>`;
@@ -316,7 +361,8 @@ function dashboard() {
 
     get timelineAxisStart() {
       const older = this.data.timeline.older;
-      if ((older.webcompat || 0) + (older.platform || 0) > 0) return "older";
+      const olderTotal = ALL_CATEGORIES.reduce((s, c) => s + (older[c] || 0), 0);
+      if (olderTotal > 0) return "older";
       const b = this.data.timeline.buckets;
       return b.length ? b[0].date : "";
     },

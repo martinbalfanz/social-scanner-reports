@@ -5,8 +5,11 @@
   --bg-card: #ffffff;
   --border: #e3e3e3;
   --accent: #3a6dba;
-  --cat-webcompat: #c04040;
-  --cat-platform: #c08040;
+  --cat-webcompat: #c04040;        /* red */
+  --cat-platform: #c08040;         /* amber */
+  --cat-performance: #7035c0;      /* purple */
+  --cat-accessibility: #2a8090;    /* teal */
+  --cat-other: #9a9a9a;            /* grey, default-hidden category */
   --verdict-match: #2f7d2f;
   --verdict-unsure: #a07020;
   --verdict-unrelated: #8a8a8a;
@@ -119,6 +122,9 @@ button.chip { cursor: pointer; }
 }
 .chip-webcompat { background: #ffe0e0; color: var(--cat-webcompat); }
 .chip-platform  { background: #fff0d0; color: var(--cat-platform); }
+.chip-performance   { background: #ece0f5; color: var(--cat-performance); }
+.chip-accessibility { background: #d8ecef; color: var(--cat-accessibility); }
+.chip-other         { background: #ececec; color: var(--cat-other); }
 .chip-match     { background: #d8f0d0; color: var(--verdict-match); }
 .chip-unsure    { background: #f0e2c0; color: var(--verdict-unsure); }
 .chip-unrelated { background: #ececec; color: var(--verdict-unrelated); }
@@ -181,6 +187,9 @@ button.chip { cursor: pointer; }
 .timeline svg { display: block; width: 100%; height: 60px; }
 .timeline .bar-webcompat { fill: var(--cat-webcompat); }
 .timeline .bar-platform  { fill: var(--cat-platform); }
+.timeline .bar-performance   { fill: var(--cat-performance); }
+.timeline .bar-accessibility { fill: var(--cat-accessibility); }
+.timeline .bar-other         { fill: var(--cat-other); }
 .timeline .bar-outside   { opacity: 0.25; }
 .timeline-axis {
   display: flex;
@@ -219,6 +228,9 @@ button.chip { cursor: pointer; }
 }
 .item.cat-webcompat { border-left-color: var(--cat-webcompat); }
 .item.cat-platform  { border-left-color: var(--cat-platform); }
+.item.cat-performance   { border-left-color: var(--cat-performance); }
+.item.cat-accessibility { border-left-color: var(--cat-accessibility); }
+.item.cat-other         { border-left-color: var(--cat-other); }
 .item-header {
   display: flex;
   align-items: baseline;
